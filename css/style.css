@@ -391,3 +391,33 @@ footer {
 
 
 }
+
+/* Quiz Options Fix */
+
+.quiz .btn-secondary {
+
+    background: #1e293b;
+    color: white;
+    border: 1px solid #60a5fa;
+
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+.quiz .btn-secondary:hover {
+
+    background: #334155;
+
+    transform: translateY(-3px);
+
+}
