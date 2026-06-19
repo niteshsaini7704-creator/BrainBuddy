@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Career Roadmap</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+BrainBuddy AI
+
+</div>
+
+
+
+<ul class="nav-links">
+
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="dashboard.html">Dashboard</a>
+</li>
+
+
+<li>
+<a href="planner.html">Planner</a>
+</li>
+
+
+<li>
+<a href="quiz.html">Quiz</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="career">
+
+
+<h1>
+🚀 Career Roadmaps
+</h1>
+
+
+<p>
+Choose your path and start building your skills.
+</p>
+
+
+
+
+
+<div class="feature-grid">
+
+
+
+
+
+<div class="card">
+
+
+<h3>💻 Web Developer</h3>
+
+
+<p>
+
+Learn:
+
+<br>
+HTML, CSS, JavaScript
+
+<br>
+React
+
+<br>
+Git & GitHub
+
+<br>
+Projects
+
+<br>
+Internships
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>🤖 AI Engineer</h3>
+
+
+<p>
+
+Learn:
+
+<br>
+Python
+
+<br>
+Machine Learning Basics
+
+<br>
+AI Tools
+
+<br>
+APIs
+
+<br>
+Automation
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>📊 Data Analyst</h3>
+
+
+<p>
+
+Learn:
+
+<br>
+Excel
+
+<br>
+SQL
+
+<br>
+Python
+
+<br>
+Power BI
+
+<br>
+Data Visualization
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>📱 App Developer</h3>
+
+
+<p>
+
+Learn:
+
+<br>
+Flutter / React Native
+
+<br>
+UI Design
+
+<br>
+Firebase
+
+<br>
+Mobile Projects
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>📢 Digital Marketing</h3>
+
+
+<p>
+
+Learn:
+
+<br>
+SEO
+
+<br>
+Content Marketing
+
+<br>
+Social Media
+
+<br>
+Analytics
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>🎯 Internship Roadmap</h3>
+
+
+<p>
+
+Step 1:
+Build Projects
+
+<br>
+
+Step 2:
+Create Portfolio
+
+<br>
+
+Step 3:
+Apply Daily
+
+<br>
+
+Step 4:
+Improve Skills
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<p>
+© 2026 BrainBuddy AI | Career Growth Platform
+</p>
+
+
+</footer>
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

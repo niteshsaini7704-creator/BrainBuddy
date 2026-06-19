@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+BrainBuddy AI
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="planner.html">Planner</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="career.html">Career</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+<section class="dashboard">
+
+
+<h1>
+Welcome to BrainBuddy AI Dashboard 🚀
+</h1>
+
+
+<p>
+Manage your study, productivity and career growth from one place.
+</p>
+
+
+
+<div class="feature-grid">
+
+
+
+<div class="card">
+
+<h3>📚 Study Progress</h3>
+
+<p id="progress">
+No progress yet
+</p>
+
+
+<button class="btn-primary" onclick="saveProgress(2)">
+Add 2 Hours Study
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>📝 Tasks</h3>
+
+
+<p>
+Plan your daily learning goals.
+</p>
+
+
+<a href="planner.html" class="btn-primary">
+
+Open Planner
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>🎯 Quiz Score</h3>
+
+
+<p>
+
+Your latest score:
+
+<span id="score">
+0
+</span>
+
+</p>
+
+
+<a href="quiz.html" class="btn-primary">
+
+Take Quiz
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>💼 Career Growth</h3>
+
+
+<p>
+
+Build skills, resume and internship roadmap.
+
+</p>
+
+
+<a href="career.html" class="btn-primary">
+
+Explore Career
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 BrainBuddy AI | Student AI Companion
+</p>
+
+</footer>
+
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+
+document.getElementById("progress").innerHTML = showProgress();
+
+
+document.getElementById("score").innerHTML = getQuizScore();
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Resume Builder</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+BrainBuddy AI
+</div>
+
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="dashboard.html">Dashboard</a>
+</li>
+
+<li>
+<a href="career.html">Career</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="resume">
+
+
+<h1>
+📄 Resume Builder
+</h1>
+
+
+<p>
+Create your professional student resume.
+</p>
+
+
+
+
+<div class="card">
+
+
+<input 
+type="text"
+id="name"
+placeholder="Your Name">
+
+
+
+<input 
+type="text"
+id="education"
+placeholder="Education (Example: BCA 2nd Year)">
+
+
+
+<input 
+type="text"
+id="skills"
+placeholder="Skills (HTML, CSS, JavaScript)">
+
+
+
+<input 
+type="text"
+id="projects"
+placeholder="Projects">
+
+
+
+<input 
+type="text"
+id="experience"
+placeholder="Internship / Experience">
+
+
+
+
+
+<button 
+class="btn-primary"
+onclick="generateResume()">
+
+Generate Resume
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="card" id="resumeOutput">
+
+
+<h2>
+Your Resume Preview
+</h2>
+
+
+<p>
+Fill details to generate resume
+</p>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 BrainBuddy AI
+</p>
+
+</footer>
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+
+
+function generateResume(){
+
+
+
+let name =
+document.getElementById("name").value;
+
+
+
+let education =
+document.getElementById("education").value;
+
+
+
+let skills =
+document.getElementById("skills").value;
+
+
+
+let projects =
+document.getElementById("projects").value;
+
+
+
+let experience =
+document.getElementById("experience").value;
+
+
+
+
+
+
+let resume = `
+
+
+<h2>${name}</h2>
+
+
+<h3>Education</h3>
+
+<p>${education}</p>
+
+
+
+<h3>Skills</h3>
+
+<p>${skills}</p>
+
+
+
+<h3>Projects</h3>
+
+<p>${projects}</p>
+
+
+
+<h3>Experience</h3>
+
+<p>${experience}</p>
+
+
+
+`;
+
+
+
+
+
+document.getElementById("resumeOutput").innerHTML = resume;
+
+
+
+
+localStorage.setItem(
+
+"resume",
+
+resume
+
+);
+
+
+
+}
+
+
+
+
+window.onload = function(){
+
+
+let savedResume = localStorage.getItem("resume");
+
+
+if(savedResume){
+
+
+document.getElementById("resumeOutput").innerHTML =
+savedResume;
+
+
+}
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Quiz</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+BrainBuddy AI
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="planner.html">Planner</a></li>
+
+<li><a href="career.html">Career</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+<section class="quiz">
+
+
+<h1>
+🧠 BCA Practice Quiz
+</h1>
+
+
+<p>
+Test your programming and computer science knowledge.
+</p>
+
+
+
+
+<div class="card">
+
+
+<h3 id="question">
+Question Loading...
+</h3>
+
+
+<div id="options"></div>
+
+
+<button 
+class="btn-primary"
+onclick="nextQuestion()">
+
+Next Question
+
+</button>
+
+
+<h3 id="result"></h3>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 BrainBuddy AI
+</p>
+
+</footer>
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+
+const quizData = [
+
+
+{
+
+question:"C language was developed by?",
+
+options:[
+"Dennis Ritchie",
+"James Gosling",
+"Guido van Rossum",
+"Bjarne Stroustrup"
+],
+
+answer:"Dennis Ritchie"
+
+},
+
+
+
+{
+
+question:"HTML stands for?",
+
+options:[
+"Hyper Text Markup Language",
+"High Text Machine Language",
+"Hyper Tool Mark Language",
+"None"
+],
+
+answer:"Hyper Text Markup Language"
+
+},
+
+
+
+{
+
+question:"Which data structure uses FIFO?",
+
+options:[
+"Stack",
+"Queue",
+"Tree",
+"Graph"
+],
+
+answer:"Queue"
+
+},
+
+
+
+{
+
+question:"JavaScript is a?",
+
+options:[
+"Programming Language",
+"Database",
+"Operating System",
+"Compiler"
+],
+
+answer:"Programming Language"
+
+}
+
+
+
+];
+
+
+
+let currentQuestion = 0;
+
+let score = 0;
+
+
+
+
+function loadQuestion(){
+
+
+let q = quizData[currentQuestion];
+
+
+document.getElementById("question").innerHTML =
+q.question;
+
+
+
+let optionBox =
+document.getElementById("options");
+
+
+optionBox.innerHTML="";
+
+
+
+q.options.forEach(option=>{
+
+
+optionBox.innerHTML += `
+
+<button class="btn-secondary"
+onclick="checkAnswer('${option}')">
+
+${option}
+
+</button>
+
+<br><br>
+
+`;
+
+});
+
+
+}
+
+
+
+
+
+function checkAnswer(selected){
+
+
+let correct =
+quizData[currentQuestion].answer;
+
+
+
+if(selected === correct){
+
+score++;
+
+}
+
+
+}
+
+
+
+
+function nextQuestion(){
+
+
+
+currentQuestion++;
+
+
+
+if(currentQuestion < quizData.length){
+
+
+loadQuestion();
+
+
+}
+
+else{
+
+
+document.getElementById("question").innerHTML =
+"Quiz Completed 🎉";
+
+
+document.getElementById("options").innerHTML="";
+
+
+document.getElementById("result").innerHTML =
+"Your Score: " + score;
+
+
+
+saveQuizScore(score);
+
+
+}
+
+
+
+}
+
+
+
+loadQuestion();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

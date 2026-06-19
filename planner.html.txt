@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Planner</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+BrainBuddy AI
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="career.html">Career</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+<section class="planner">
+
+
+<h1>
+📅 Study Planner
+</h1>
+
+
+<p>
+Create your daily study tasks and track your learning.
+</p>
+
+
+
+<div class="planner-box">
+
+
+<input 
+type="text" 
+id="taskInput"
+placeholder="Enter your study task...">
+
+
+<button 
+class="btn-primary"
+onclick="addPlannerTask()">
+
+Add Task
+
+</button>
+
+
+</div>
+
+
+
+<div id="taskList">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 BrainBuddy AI
+</p>
+
+</footer>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+
+function addPlannerTask(){
+
+
+let task = document.getElementById("taskInput").value;
+
+
+
+if(task==""){
+
+alert("Please enter a task");
+
+return;
+
+}
+
+
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+
+
+tasks.push(task);
+
+
+
+localStorage.setItem(
+"tasks",
+JSON.stringify(tasks)
+);
+
+
+
+document.getElementById("taskInput").value="";
+
+
+displayTasks();
+
+
+
+}
+
+
+
+
+function displayTasks(){
+
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+
+let box = document.getElementById("taskList");
+
+
+box.innerHTML="";
+
+
+
+tasks.forEach((task,index)=>{
+
+
+box.innerHTML += `
+
+<div class="card">
+
+<h3>
+${task}
+</h3>
+
+
+<button 
+class="btn-primary"
+onclick="deleteTask(${index})">
+
+Complete
+
+</button>
+
+
+</div>
+
+`;
+
+
+});
+
+
+
+}
+
+
+
+function deleteTask(index){
+
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+
+tasks.splice(index,1);
+
+
+localStorage.setItem(
+"tasks",
+JSON.stringify(tasks)
+);
+
+
+
+displayTasks();
+
+
+}
+
+
+
+
+displayTasks();
+
+
+</script>
+
+
+
+</body>
+
+</html>
