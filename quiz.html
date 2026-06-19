@@ -225,7 +225,7 @@ q.options.forEach(option=>{
 optionBox.innerHTML += `
 
 <button class="btn-secondary"
-onclick="checkAnswer('${option}')">
+onclick="checkAnswer('${option}', this)">
 
 ${option}
 
@@ -244,17 +244,31 @@ ${option}
 
 
 
-function checkAnswer(selected){
+function checkAnswer(selected, button){
 
 
-let correct =
-quizData[currentQuestion].answer;
-
+let correct = quizData[currentQuestion].answer;
 
 
 if(selected === correct){
 
-score++;
+    button.style.background = "#22c55e";
+    button.style.color = "white";
+
+    document.getElementById("result").innerHTML =
+    "✅ Correct Answer!";
+
+    score++;
+
+}
+
+else{
+
+    button.style.background = "#ef4444";
+    button.style.color = "white";
+
+    document.getElementById("result").innerHTML =
+    "❌ Wrong Answer";
 
 }
 
