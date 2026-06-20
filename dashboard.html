@@ -74,19 +74,7 @@ No progress yet
 </p>
 
 
-<button class="btn-primary" onclick="saveProgress(2)">
-Add 2 Hours Study
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
+<button class="btn-primary" onclick="saveStudyHours(2)" updateProgress();"
 
 <h3>📝 Tasks</h3>
 
@@ -197,7 +185,20 @@ document.getElementById("score").innerHTML = getQuizScore();
 
 </script>
 
+<script>
 
+function updateProgress(){
+
+    let hours = getStudyHours();
+
+    document.getElementById("progress").innerHTML =
+    hours + " Hours Completed ✅";
+
+}
+
+updateProgress();
+
+</script>
 
 </body>
 
