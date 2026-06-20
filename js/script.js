@@ -280,9 +280,9 @@ function getStudent(){
 
     return localStorage.getItem(
 
-        "studentName"
+        "studentHours"
 
-    ) || "Student";
+    ) || 0;
 
 
 }
