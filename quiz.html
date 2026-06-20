@@ -342,24 +342,23 @@ ${option}
 
 
 
-function checkAnswer(selected, button){
+function checkAnswer(selected){
 
     if(answered) return;
 
     answered = true;
 
-    button.style.border = "3px solid #60a5fa";
-
-    button.style.opacity = "0.8";
-
     let correct =
     quizData[currentQuestion].answer;
+
 
     if(selected === correct){
 
         score++;
 
     }
+
+}
 
 }
 
