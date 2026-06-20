@@ -47,6 +47,7 @@ BrainBuddy AI
 
 
 
+
 <section class="dashboard">
 
 
@@ -73,6 +74,7 @@ Manage your study, productivity and career growth from one place.
 No progress yet
 </p>
 
+
 <button class="btn-primary"
 onclick="addStudyHours(2); updateProgress();">
 
@@ -80,7 +82,10 @@ Add 2 Hours Study
 
 </button>
 
+
 </div>
+
+
 
 
 
@@ -92,18 +97,21 @@ Add 2 Hours Study
 Plan your daily learning goals.
 </p>
 
+
 <a href="planner.html" class="btn-primary">
 
 Open Planner
 
 </a>
 
+
 </div>
 
 
 
-<div class="card">
 
+
+<div class="card">
 
 <h3>🎯 Quiz Score</h3>
 
@@ -134,14 +142,11 @@ Take Quiz
 
 <div class="card">
 
-
 <h3>💼 Career Growth</h3>
 
 
 <p>
-
 Build skills, resume and internship roadmap.
-
 </p>
 
 
@@ -159,8 +164,8 @@ Explore Career
 </div>
 
 
-
 </section>
+
 
 
 
@@ -171,35 +176,49 @@ Explore Career
 © 2026 BrainBuddy AI | Student AI Companion
 </p>
 
+
 </footer>
 
 
 
 
+
 <script src="js/script.js"></script>
 
 
 <script>
 
-document.getElementById("score").innerHTML = getQuizScore();
+
+checkDailyReset();
 
 
-</script>
-<script src="js/script.js"></script>
-<script>
 
 function updateProgress(){
 
-    let hours = getStudyHours();
+let hours = getStudyHours();
 
-    document.getElementById("progress").innerHTML =
-    hours + " Hours Completed ✅";
+
+document.getElementById("progress").innerHTML =
+
+hours + " Hours Completed ✅";
+
 
 }
-checkDailyReset();
+
+
+
 updateProgress();
 
+
+
+document.getElementById("score").innerHTML =
+
+getQuizScore();
+
+
+
 </script>
+
 
 </body>
 
