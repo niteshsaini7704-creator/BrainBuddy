@@ -295,7 +295,7 @@ let currentQuestion = 0;
 
 let score = 0;
 
-
+let answered = false;
 
 
 function loadQuestion(){
@@ -322,7 +322,7 @@ q.options.forEach(option=>{
 
 optionBox.innerHTML += `
 
-<button class="btn-secondary"
+<button class="quiz-option btn-secondary"
 onclick="checkAnswer('${option}', this)">
 
 ${option}
@@ -344,19 +344,22 @@ ${option}
 
 function checkAnswer(selected, button){
 
+    if(answered) return;
 
-let correct = quizData[currentQuestion].answer;
+    answered = true;
 
+    button.style.border = "3px solid #60a5fa";
 
-if(selected === correct){
+    button.style.opacity = "0.8";
 
-    button.style.background = "#22c55e";
-    button.style.color = "white";
+    let correct =
+    quizData[currentQuestion].answer;
 
-    document.getElementById("result").innerHTML =
-    "✅ Correct Answer!";
+    if(selected === correct){
 
-    score++;
+        score++;
+
+    }
 
 }
 
@@ -378,7 +381,7 @@ else{
 
 function nextQuestion(){
 
-
+answered = false;
 
 currentQuestion++;
 
