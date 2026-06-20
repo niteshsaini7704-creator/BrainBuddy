@@ -315,5 +315,17 @@ function checkDailyReset(){
         localStorage.setItem("lastStudyDate", today);
 
     }
+  
+       .quiz-option{
+
+    transition:0.3s;
+
+}
+
+.quiz-option:hover{
+
+    transform:translateY(-2px);
+
+}
 
 }
