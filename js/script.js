@@ -291,3 +291,13 @@ function getStudent(){
 
 
 console.log("BrainBuddy AI Ready ✅");
+
+function addStudyHours(hours){
+
+    let current = parseInt(getStudyHours()) || 0;
+
+    current += hours;
+
+    localStorage.setItem("studyHours", current);
+
+}
