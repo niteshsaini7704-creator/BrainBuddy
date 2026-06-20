@@ -23,18 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggleMode(){
 
-
     document.body.classList.toggle("light");
 
-
     localStorage.setItem(
-
         "theme",
-
         document.body.className
-
     );
-
 
 }
 
@@ -42,16 +36,13 @@ function toggleMode(){
 
 function loadMode(){
 
-
     let theme = localStorage.getItem("theme");
-
 
     if(theme){
 
         document.body.className = theme;
 
     }
-
 
 }
 
@@ -66,27 +57,18 @@ function loadMode(){
 
 function saveTask(task){
 
-
     let tasks = JSON.parse(
-
         localStorage.getItem("tasks")
-
     ) || [];
-
 
 
     tasks.push(task);
 
 
-
     localStorage.setItem(
-
         "tasks",
-
         JSON.stringify(tasks)
-
     );
-
 
 }
 
@@ -95,13 +77,9 @@ function saveTask(task){
 
 function getTasks(){
 
-
     return JSON.parse(
-
         localStorage.getItem("tasks")
-
     ) || [];
-
 
 }
 
@@ -111,7 +89,6 @@ function getTasks(){
 
 function deleteTask(index){
 
-
     let tasks = getTasks();
 
 
@@ -120,13 +97,9 @@ function deleteTask(index){
 
 
     localStorage.setItem(
-
         "tasks",
-
         JSON.stringify(tasks)
-
     );
-
 
 }
 
@@ -136,21 +109,22 @@ function deleteTask(index){
 
 
 // ===============================
-// Productivity Tracker
+// Study Progress System
 // ===============================
 
 
-function saveStudyHours(hours){
+function addStudyHours(hours){
+
+    let current = parseInt(getStudyHours()) || 0;
+
+
+    current += hours;
 
 
     localStorage.setItem(
-
         "studyHours",
-
-        hours
-
+        current
     );
-
 
 }
 
@@ -159,13 +133,38 @@ function saveStudyHours(hours){
 
 function getStudyHours(){
 
+    return localStorage.getItem("studyHours") || 0;
 
-    return localStorage.getItem(
+}
 
-        "studyHours"
 
-    ) || 0;
 
+
+
+function checkDailyReset(){
+
+    let today = new Date().toDateString();
+
+
+    let lastDate =
+    localStorage.getItem("lastStudyDate");
+
+
+
+    if(lastDate !== today){
+
+        localStorage.setItem(
+            "studyHours",
+            0
+        );
+
+
+        localStorage.setItem(
+            "lastStudyDate",
+            today
+        );
+
+    }
 
 }
 
@@ -179,33 +178,22 @@ function getStudyHours(){
 // ===============================
 
 
-
 function saveQuizScore(score){
 
-
     localStorage.setItem(
-
         "quizScore",
-
         score
-
     );
-
 
 }
 
 
 
 
+
 function getQuizScore(){
 
-
-    return localStorage.getItem(
-
-        "quizScore"
-
-    ) || 0;
-
+    return localStorage.getItem("quizScore") || 0;
 
 }
 
@@ -222,30 +210,20 @@ function getQuizScore(){
 
 function saveResume(data){
 
-
     localStorage.setItem(
-
         "resume",
-
         data
-
     );
-
 
 }
 
 
 
 
+
 function getResume(){
 
-
-    return localStorage.getItem(
-
-        "resume"
-
-    );
-
+    return localStorage.getItem("resume");
 
 }
 
@@ -261,71 +239,25 @@ function getResume(){
 
 function saveStudent(name){
 
-
     localStorage.setItem(
-
         "studentName",
-
         name
-
     );
 
-
 }
+
 
 
 
 function getStudent(){
 
-
-    return localStorage.getItem(
-
-        "studentHours"
-
-    ) || 0;
-
+    return localStorage.getItem("studentName") || "";
 
 }
+
+
 
 
 
 
 console.log("BrainBuddy AI Ready ✅");
-
-function addStudyHours(hours){
-
-    let current = parseInt(getStudyHours()) || 0;
-
-    current += hours;
-
-    localStorage.setItem("studyHours", current);
-
-}
-
-function checkDailyReset(){
-
-    let today = new Date().toDateString();
-
-    let lastDate = localStorage.getItem("lastStudyDate");
-
-    if(lastDate !== today){
-
-        localStorage.setItem("studyHours", 0);
-
-        localStorage.setItem("lastStudyDate", today);
-
-    }
-  
-       quiz-option{
-
-    transition:0.3s;
-
-}
-
-.quiz-option:hover{
-
-    transform:translateY(-2px);
-
-}
-
-}
