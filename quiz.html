@@ -342,11 +342,15 @@ ${option}
 
 
 
-function checkAnswer(selected){
+function checkAnswer(selected, button){
 
     if(answered) return;
 
     answered = true;
+
+
+    button.style.border = "3px solid #60a5fa";
+
 
     let correct =
     quizData[currentQuestion].answer;
@@ -359,22 +363,6 @@ function checkAnswer(selected){
     }
 
 }
-
-}
-
-else{
-
-    button.style.background = "#ef4444";
-    button.style.color = "white";
-
-    document.getElementById("result").innerHTML =
-    "❌ Wrong Answer";
-
-}
-
-
-}
-
 
 
 
