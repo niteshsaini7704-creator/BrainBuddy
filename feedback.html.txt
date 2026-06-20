@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrainBuddy AI Feedback</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+BrainBuddy AI
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<section class="dashboard">
+
+
+<h1>
+💬 Give Your Feedback
+</h1>
+
+
+<p>
+Help us improve BrainBuddy AI 🚀
+</p>
+
+
+
+<div class="card">
+
+
+<h3>
+Your feedback matters
+</h3>
+
+
+<p>
+Tell us what you like, what problem you faced or what feature you want.
+</p>
+
+
+
+<a 
+href="https://docs.google.com/forms/d/e/1FAIpQLScxOT6gCVoR1MPb2WBR1VPu59-_FwccD1EneoBetX7ejHFhqw/viewform?usp=publish-editor"
+class="btn-primary">
+
+Submit Feedback
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 BrainBuddy AI
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
