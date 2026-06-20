@@ -316,7 +316,7 @@ function checkDailyReset(){
 
     }
   
-       .quiz-option{
+       quiz-option{
 
     transition:0.3s;
 
