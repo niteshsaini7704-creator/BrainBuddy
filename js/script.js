@@ -301,3 +301,19 @@ function addStudyHours(hours){
     localStorage.setItem("studyHours", current);
 
 }
+
+function checkDailyReset(){
+
+    let today = new Date().toDateString();
+
+    let lastDate = localStorage.getItem("lastStudyDate");
+
+    if(lastDate !== today){
+
+        localStorage.setItem("studyHours", 0);
+
+        localStorage.setItem("lastStudyDate", today);
+
+    }
+
+}
