@@ -603,3 +603,37 @@ box-shadow:0 0 25px rgba(96,165,250,.25);
 margin-bottom:15px;
 color:#60a5fa;
 }
+
+<section class="future-ai"><h2 class="section-title">
+🚀 Future AI Features
+</h2><p class="section-subtitle">
+BrainBuddy AI is evolving into a complete AI-powered learning platform.
+</p><div class="feature-grid"><div class="card">
+<h3>🤖 AI Tutor</h3>
+<p>
+Ask any programming or BCA-related question and get instant explanations.
+</p>
+</div><div class="card">
+<h3>📄 PDF Summarizer</h3>
+<p>
+Upload notes and get summaries, important questions and revision material.
+</p>
+</div><div class="card">
+<h3>🧠 AI Quiz Generator</h3>
+<p>
+Generate unlimited quizzes based on any topic and difficulty level.
+</p>
+</div><div class="card">
+<h3>💼 Internship Assistant</h3>
+<p>
+Get internship roadmaps, skill suggestions and career guidance.
+</p>
+</div></div></section><section class="about"><h2 class="section-title">
+About BrainBuddy AI
+</h2><p class="about-text">BrainBuddy AI is a student-focused platform designed to help learners
+stay productive, improve their skills, prepare for careers and manage
+their academic journey through smart tools and AI-powered assistance.
+
+Built by students, for students.
+
+</p></section>
