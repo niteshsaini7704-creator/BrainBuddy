@@ -261,3 +261,30 @@ function getStudent(){
 
 
 console.log("BrainBuddy AI Ready ✅");
+
+const particlesContainer =
+document.getElementById("particles");
+
+if(particlesContainer){
+
+for(let i=0;i<40;i++){
+
+let particle =
+document.createElement("div");
+
+particle.classList.add("particle");
+
+particle.style.left =
+Math.random()*100+"%";
+
+particle.style.animationDuration =
+(5+Math.random()*10)+"s";
+
+particle.style.animationDelay =
+Math.random()*5+"s";
+
+particlesContainer.appendChild(particle);
+
+}
+
+}
