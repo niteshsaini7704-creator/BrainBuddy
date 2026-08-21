@@ -1,279 +1,89 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrainBuddy AI - Your AI Study Companion</title><link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5CV0GQFNV"></script>  <script>  
-  window.dataLayer = window.dataLayer || [];  
-  function gtag(){dataLayer.push(arguments);}  
-  gtag('js', new Date());  
-  
-  gtag('config', 'G-J5CV0GQFNV');  
-</script>
- 
-</head><body><!-- Navbar -->
+    <title>BrainBuddy AI - Your AI Study Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <div id="particles"></div>
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            BrainBuddy AI
+    <header>
+        <nav class="navbar">
+            <div class="logo">BrainBuddy AI</div>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color:#60a5fa;">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="planner.html">Planner</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+            <a href="dashboard.html" class="btn-primary" style="margin-top:0 !important;">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="badge">🚀 Built by Senior for Juniors | AI-Powered Student Platform</div>
+            <h1>BrainBuddy <span>AI</span></h1>
+            <h2>Study Smarter. Grow Faster.</h2>
+            <p>BrainBuddy AI helps BCA 1st-year and all students manage study plans, access exclusive notes, track progress, practice quizzes, build resumes, and stay productive.</p>
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn-primary">Launch Dashboard</a>
+                <a href="notes.html" class="btn-secondary">Explore Notes</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card"><h3>📚</h3><p>BBC102 Notes</p></div>
+                <div class="stat-card"><h3>🎯</h3><p>Smart Quiz</p></div>
+                <div class="stat-card"><h3>💼</h3><p>Career Roadmaps</p></div>
+                <div class="stat-card"><h3>🚀</h3><p>Productivity</p></div>
+            </div>
         </div>
+    </section>
 
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="planner.html">Planner</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-        </ul>
-
-        <a href="dashboard.html" class="btn-primary">
-            Get Started
-        </a>
-    </nav>
-</header>
-
-<!-- Hero Section -->
-<section class="hero" id="home"><div class="hero-bg"></div><div class="hero-content"><div class="badge">
-🚀 AI-Powered Student Companion
-</div><h1>
-BrainBuddy <span>AI</span>
-</h1><h2 id="typing-text">
-Study Smarter. Grow Faster.
-</h2><p>
-BrainBuddy AI helps students manage study plans,
-track progress, practice quizzes, build resumes,
-explore internships and stay productive from one dashboard.
-</p><div class="hero-buttons"><a href="dashboard.html" class="btn-primary">
-Launch Dashboard
-</a><a href="#features" class="btn-secondary">
-Explore Features
-</a></div><div class="hero-stats"><div class="stat-card">
-<h3>📚</h3>
-<p>Study Planner</p>
-</div><div class="stat-card">
-<h3>🎯</h3>
-<p>Quiz Practice</p>
-</div><div class="stat-card">
-<h3>💼</h3>
-<p>Career Guidance</p>
-</div><div class="stat-card">
-<h3>🚀</h3>
-<p>Productivity</p>
-</div></div></div>
-
-</section>
-
-<!-- Features -->
-<section id="features" class="features">
-
-    <h2>Features</h2>
-
-    <div class="feature-grid">
-
-        <div class="card">
-            <h3>Study Planner</h3>
-            <p>Create daily and weekly study plans.</p>
+    <section class="features">
+        <h2 class="section-title">Powerful Platform Features</h2>
+        <p class="section-subtitle">Everything a student needs to excel academically and build a successful tech career.</p>
+        <div class="feature-grid">
+            <div class="card">
+                <h3>📚 BCA 1st Year Notes</h3>
+                <p>Access structured, color-coded notes for BBC102 Information Systems and core subjects.</p>
+                <a href="notes.html" class="btn-primary">Read Notes</a>
+            </div>
+            <div class="card">
+                <h3>📚 Study Planner</h3>
+                <p>Create daily study plans and stay consistent with your learning goals.</p>
+                <a href="planner.html" class="btn-primary">Open Planner</a>
+            </div>
+            <div class="card">
+                <h3>🎯 Interactive Quiz</h3>
+                <p>Practice syllabus-based MCQs and track your exam readiness instantly.</p>
+                <a href="quiz.html" class="btn-primary">Take Quiz</a>
+            </div>
+            <div class="card">
+                <h3>💼 Career Roadmaps</h3>
+                <p>Explore specialized skills, internships, and pathways for Web Dev, AI, and Data Science.</p>
+                <a href="career.html" class="btn-primary">View Career</a>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Quiz Generator</h3>
-            <p>Practice quizzes and track performance.</p>
+    <footer>
+        <h2>BrainBuddy AI</h2>
+        <p>Your Personal AI Study Companion</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="notes.html">Notes</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="planner.html">Planner</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="feedback.html">Feedback</a>
         </div>
-
-        <div class="card">
-            <h3>Resume Builder</h3>
-            <p>Create professional resumes easily.</p>
-        </div>
-
-        <div class="card">
-            <h3>Career Roadmaps</h3>
-            <p>Explore career paths and learning journeys.</p>
-        </div>
-
-        <div class="card">
-            <h3>Productivity Tracker</h3>
-            <p>Track your study progress daily.</p>
-        </div>
-
-        <div class="card">
-            <h3>AI Assistant (Coming Soon)</h3>
-            <p>AI-powered learning support for students.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- About -->
-<section id="about" class="about">
-
-    <h2>About BrainBuddy AI</h2>
-
-    <p>
-        BrainBuddy AI is designed to help students learn smarter,
-        stay productive, build careers, and achieve academic goals.
-        It combines study planning, quizzes, productivity tracking,
-        and career tools into one platform.
-    </p>
-
-</section>
-
-    <section class="testimonials"><h2 class="section-title">
-💬 Student Reviews
-</h2><div class="feature-grid"><div class="card">
-<p>
-"BrainBuddy AI helped me organize my studies and stay productive."
-</p><h4>⭐⭐⭐⭐⭐</h4><span>- BCA Student</span>
-
-</div><div class="card">
-<p>
-"The quiz section is simple and useful for revision."
-</p><h4>⭐⭐⭐⭐⭐</h4><span>- College Student</span>
-
-</div><div class="card">
-<p>
-"I love the career roadmap and study planner features."
-</p><h4>⭐⭐⭐⭐⭐</h4><span>- Aspiring Developer</span>
-
-</div></div></section>
-
-    <section class="stats-section">
-
-<div class="stat-box">
-
-<h2 class="counter" data-target="100">0</h2>
-<p>Study Sessions</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2 class="counter" data-target="50">0</h2>
-<p>Quiz Attempts</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2 class="counter" data-target="20">0</h2>
-<p>Student Feedbacks</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>24/7</h2>
-<p>Learning Support</p>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-
-    <h2>Ready to Boost Your Learning?</h2>
-
-    <a href="dashboard.html" class="btn-primary">
-        Start Now
-    </a>
-
-</section>
-
-    <section class="features" id="features"><h2 class="section-title">
-Powerful Features
-</h2><p class="section-subtitle">
-Everything a student needs to study smarter, stay productive and build a successful career.
-</p><div class="feature-grid"><div class="card">
-<h3>📚 Study Planner</h3>
-<p>
-Create daily study plans and stay consistent with your learning goals.
-</p>
-</div><div class="card">
-<h3>🎯 Smart Quiz</h3>
-<p>
-Practice BCA concepts with interactive quizzes and track your performance.
-</p>
-</div><div class="card">
-<h3>📈 Progress Tracking</h3>
-<p>
-Monitor your study hours and stay motivated with productivity tracking.
-</p>
-</div><div class="card">
-<h3>💼 Career Roadmap</h3>
-<p>
-Explore skills, internships and career paths for BCA students.
-</p>
-</div><div class="card">
-<h3>📄 Resume Builder</h3>
-<p>
-Build a professional resume and prepare for internships.
-</p>
-</div><div class="card">
-<h3>💬 Feedback System</h3>
-<p>
-Share ideas, report bugs and help improve BrainBuddy AI.
-</p>
-</div></div></section>
-
-    <section class="future-ai"><h2 class="section-title">
-🚀 Future AI Features
-</h2><p class="section-subtitle">
-BrainBuddy AI is evolving into a complete AI-powered learning platform.
-</p><div class="feature-grid"><div class="card">
-<h3>🤖 AI Tutor</h3>
-<p>
-Ask any programming or BCA-related question and get instant explanations.
-</p>
-</div><div class="card">
-<h3>📄 PDF Summarizer</h3>
-<p>
-Upload notes and get summaries, important questions and revision material.
-</p>
-</div><div class="card">
-<h3>🧠 AI Quiz Generator</h3>
-<p>
-Generate unlimited quizzes based on any topic and difficulty level.
-</p>
-</div><div class="card">
-<h3>💼 Internship Assistant</h3>
-<p>
-Get internship roadmaps, skill suggestions and career guidance.
-</p>
-</div></div></section><section class="about"><h2 class="section-title">
-About BrainBuddy AI
-</h2><p class="about-text">BrainBuddy AI is a student-focused platform designed to help learners
-stay productive, improve their skills, prepare for careers and manage
-their academic journey through smart tools and AI-powered assistance.
-
-Built by students, for students.
-
-</p></section>
-
-<!-- Footer -->
-<footer><h2>
-BrainBuddy AI
-</h2><p>
-Your Personal AI Study Companion
-</p><div class="footer-links"><a href="index.html">Home</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-<a href="planner.html">Planner</a>
-
-<a href="quiz.html">Quiz</a>
-
-<a href="feedback.html">Feedback</a>
-
-</div><p class="copyright">
-© 2026 BrainBuddy AI | Built by Nitesh
-</p></footer>
-
-<script src="js/script.js"></script>
-
+        <p class="copyright">© 2026 BrainBuddy AI | Built for Juniors</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
