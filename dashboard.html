@@ -6,14 +6,15 @@
     <title>BrainBuddy AI Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5CV0GQFNV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J5CV0GQFNV');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5CV0GQFNV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J5CV0GQFNV');
+    </script>
 </head>
 <body>
     <header>
@@ -26,6 +27,7 @@
                 <li><a href="planner.html">Planner</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="career.html">Career</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
     </header>
@@ -37,13 +39,8 @@
         <div class="feature-grid" style="margin-top: 40px;">
             <div class="card">
                 <h3>📚 BCA Notes Portal</h3>
-                <p>Read Unit-1 BBC102 Information Systems notes prepared for juniors.</p>
+                <p>Read Unit-1 BBC102 Information Systems complete 18-page notes.</p>
                 <a href="notes.html" class="btn-primary">View Notes</a>
-            </div>
-            <div class="card">
-                <h3>📚 Study Progress</h3>
-                <p id="progress">No progress yet</p>
-                <button class="btn-primary" onclick="addStudyHours(2); updateProgress();">Add 2 Hours Study</button>
             </div>
             <div class="card">
                 <h3>📝 Daily Planner</h3>
@@ -60,11 +57,6 @@
                 <p>Build skills, resume, and explore roadmaps.</p>
                 <a href="career.html" class="btn-primary">Explore Career</a>
             </div>
-            <div class="card">
-                <h3>💬 Feedback Hub</h3>
-                <p>Share suggestions or report issues with seniors.</p>
-                <a href="feedback.html" class="btn-primary">Give Feedback</a>
-            </div>
         </div>
     </section>
 
@@ -74,12 +66,6 @@
 
     <script src="js/script.js"></script>
     <script>
-        checkDailyReset();
-        function updateProgress(){
-            let hours = getStudyHours();
-            document.getElementById("progress").innerHTML = hours + " Hours Completed ✅";
-        }
-        updateProgress();
         document.getElementById("score").innerHTML = getQuizScore();
     </script>
 </body>
