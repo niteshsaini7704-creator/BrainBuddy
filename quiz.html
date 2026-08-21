@@ -1,428 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BrainBuddy AI Quiz</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5CV0GQFNV"></script>  <script>  
-  window.dataLayer = window.dataLayer || [];  
-  function gtag(){dataLayer.push(arguments);}  
-  gtag('js', new Date());  
-  
-  gtag('config', 'G-J5CV0GQFNV');  
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainBuddy AI Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
-
-
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-BrainBuddy AI
-</div>
-
-
-<ul class="nav-links">
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="dashboard.html">Dashboard</a></li>
-
-<li><a href="planner.html">Planner</a></li>
-
-<li><a href="career.html">Career</a></li>
-
-</ul>
-
-
-</nav>
-
-</header>
-
-
-
-
-
-<section class="quiz">
-
-
-<h1>
-🧠 BCA Practice Quiz
-</h1>
-
-
-<p>
-Test your programming and computer science knowledge.
-</p>
-
-
-
-
-<div class="card">
-
-
-<h3 id="question">
-Question Loading...
-</h3>
-
-
-<div id="options"></div>
-
-
-<button 
-class="btn-primary"
-onclick="nextQuestion()">
-
-Next Question
-
-</button>
-
-
-<h3 id="result"></h3>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-<p>
-© 2026 BrainBuddy AI
-</p>
-
-</footer>
-
-
-
-
-
-
-<script src="js/script.js"></script>
-
-
-
-<script>
-
-
-const quizData = [
-
-
-{
-
-question:"C language was developed by?",
-
-options:[
-"Dennis Ritchie",
-"James Gosling",
-"Guido van Rossum",
-"Bjarne Stroustrup"
-],
-
-answer:"Dennis Ritchie"
-
-},
-
-{
-    question: "Which component of the computer is often referred to as its 'Brain'?",  
-    options: [
-      "Hard Disk",
-      "Central Processing Unit",
-      "Keyboard",
-      "Monitor"
-    ],
-    answer: "Central Processing Unit"
-  },
-
-    
-{
-    question: "Which data type is used to store fractional numbers in C?",  
-    options: [
-      "int",
-      "char",
-      "float",
-      "void"
-    ],
-    answer: "float"
-  },
-  
-{
-    question: "What is the full form of RAM?",  
-    options: [
-      "Read Access Memory",
-      "Random Access Memory",
-      "Run Ample Memory",
-      "Read Alternated Memory"
-    ],
-    answer: "Random Access Memory"
-  },
-  
-{
-    question: "Every statement in a C program must end with which character?",  
-    options: [
-      "Colon (:)",
-      "Comma (,)",
-      "Period (.)",
-      "Semicolon (;)"
-    ],
-    answer: "Semicolon (;)"
-  },
-  
-{
-    question: "Which of the following is an example of an Operating System?",  
-    options: [
-      "MS Word",
-      "Google Chrome",
-      "Windows 11",
-      "Oracle"
-    ],
-    answer: "Windows 11"
-  },
-  
-{
-    question: "What is the base of the Hexadecimal number system?",  
-    options: [
-      "2",
-      "8",
-      "10",
-      "16"
-    ],
-    answer: "16"
-  },
-  
-{
-    question: "Which function is used to print output on the screen in C language?",  
-    options: [
-      "scanf()",
-      "printf()",
-      "print()",
-      "getch()"
-    ],
-    answer: "printf()"
-  },
-  
-{
-    question: "1 Byte is equal to how many bits?",  
-    options: [
-      "4 bits",
-      "8 bits",
-      "16 bits",
-      "1024 bits"
-    ],
-    answer: "8 bits"
-  },
-  
-{
-    question: "Which of the following is a permanent storage device?",  
-    options: [
-      "RAM",
-      "Cache Memory",
-      "Hard Disk",
-      "Registers"
-    ],
-    answer: "Hard Disk"
-  },
- 
-{
-
-question:"HTML stands for?",
-
-options:[
-"Hyper Text Markup Language",
-"High Text Machine Language",
-"Hyper Tool Mark Language",
-"None"
-],
-
-answer:"Hyper Text Markup Language"
-
-},
-
-
-
-{
-
-question:"Which data structure uses FIFO?",
-
-options:[
-"Stack",
-"Queue",
-"Tree",
-"Graph"
-],
-
-answer:"Queue"
-
-},
-
-
-
-{
-
-question:"JavaScript is a?",
-
-options:[
-"Programming Language",
-"Database",
-"Operating System",
-"Compiler"
-],
-
-answer:"Programming Language"
-
-}
-
-
-
-];
-
-
-
-let currentQuestion = 0;
-
-let score = 0;
-
-let answered = false;
-
-
-function loadQuestion(){
-
-
-let q = quizData[currentQuestion];
-
-
-document.getElementById("question").innerHTML =
-q.question;
-
-
-
-let optionBox =
-document.getElementById("options");
-
-
-optionBox.innerHTML="";
-
-
-
-q.options.forEach(option=>{
-
-
-optionBox.innerHTML += `
-
-<button class="btn-secondary"
-onclick="checkAnswer('${option}', this)">
-
-${option}
-
-</button>
-
-<br><br>
-
-`;
-
-});
-
-
-}
-
-
-
-
-
-function checkAnswer(selected, button){
-
-    if(answered) return;
-
-    answered = true;
-
-
-    button.style.border = "3px solid #60a5fa";
-
-
-    let correct =
-    quizData[currentQuestion].answer;
-
-
-    if(selected === correct){
-
-        score++;
-
-    }
-
-}
-
-
-
-function nextQuestion(){
-
-answered = false;
-
-currentQuestion++;
-
-
-
-if(currentQuestion < quizData.length){
-
-
-loadQuestion();
-
-
-}
-
-else{
-
-
-document.getElementById("question").innerHTML =
-"Quiz Completed 🎉";
-
-
-document.getElementById("options").innerHTML="";
-
-
-document.getElementById("result").innerHTML =
-"Your Score: " + score;
-
-
-
-saveQuizScore(score);
-
-
-}
-
-
-
-}
-
-
-
-loadQuestion();
-
-
-
-</script>
-
-
-
+    <header>
+        <nav class="navbar">
+            <div class="logo">BrainBuddy AI</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="planner.html">Planner</a></li>
+                <li><a href="quiz.html" style="color:#60a5fa;">Quiz</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="quiz" style="padding: 50px 8%;">
+        <h1>🧠 BCA 1st Year Practice Quiz (BBC102 & Core CS)</h1>
+        <p>Test your knowledge based on Information Systems and fundamental programming concepts.</p>
+
+        <div class="card" style="max-width: 800px; margin: auto;">
+            <h3 id="question">Question Loading...</h3>
+            <div id="options" style="margin-top: 20px;"></div>
+            <button class="btn-primary" onclick="nextQuestion()" style="margin-top: 20px;">Next Question</button>
+            <h3 id="result" style="margin-top:20px;"></h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 BrainBuddy AI</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const quizData = [
+            {
+                question: "Which system handles day-to-day routine business transactions and operations?",
+                options: ["Management Information System (MIS)", "Transaction Processing System (TPS)", "Decision Support System (DSS)", "Knowledge Work System (KWS)"],
+                answer: "Transaction Processing System (TPS)"
+            },
+            {
+                question: "Which information system helps senior managers make semi-structured decisions using 'what-if' analysis?",
+                options: ["TPS", "MIS", "DSS", "CRM"],
+                answer: "DSS"
+            },
+            {
+                question: "In the information system processing cycle, raw data is organized primarily by which unit?",
+                options: ["Input device", "Computer Processor (CPU)", "Storage Drive", "Printer"],
+                answer: "Computer Processor (CPU)"
+            },
+            {
+                question: "Salesforce and HubSpot are popular examples of which enterprise platform?",
+                options: ["SCM", "CRM", "TPS", "MIS"],
+                answer: "CRM"
+            },
+            {
+                question: "What does 'Effectiveness' mean in the context of information systems?",
+                options: ["Doing things right with minimal waste", "Doing the right things to achieve strategic goals", "Fast data transfer speed", "Lowering server hardware costs"],
+                answer: "Doing the right things to achieve strategic goals"
+            },
+            {
+                question: "C language was developed by whom?",
+                options: ["Dennis Ritchie", "James Gosling", "Guido van Rossum", "Bjarne Stroustrup"],
+                answer: "Dennis Ritchie"
+            },
+            {
+                question: "Which data structure operates on a First In, First Out (FIFO) basis?",
+                options: ["Stack", "Queue", "Tree", "Graph"],
+                answer: "Queue"
+            },
+            {
+                question: "What is the full form of RAM in computer architecture?",
+                options: ["Read Access Memory", "Random Access Memory", "Run Ample Memory", "Read Alternated Memory"],
+                answer: "Random Access Memory"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        function loadQuestion(){
+            let q = quizData[currentQuestion];
+            document.getElementById("question").innerHTML = `Q${currentQuestion + 1}: ${q.question}`;
+            let optionBox = document.getElementById("options");
+            optionBox.innerHTML="";
+
+            q.options.forEach(option=>{
+                optionBox.innerHTML += `
+                    <button class="btn-secondary" style="margin-bottom: 12px; width:100%; text-align:left; display:block;" onclick="checkAnswer('${option}', this)">
+                        ${option}
+                    </button>
+                `;
+            });
+        }
+
+        function checkAnswer(selected, button){
+            if(answered) return;
+            answered = true;
+            
+            let correct = quizData[currentQuestion].answer;
+            if(selected === correct){
+                score++;
+                button.style.border = "2px solid #22c55e";
+                button.style.background = "rgba(34, 197, 94, 0.2)";
+            } else {
+                button.style.border = "2px solid #ef4444";
+                button.style.background = "rgba(239, 68, 68, 0.2)";
+            }
+        }
+
+        function nextQuestion(){
+            answered = false;
+            currentQuestion++;
+
+            if(currentQuestion < quizData.length){
+                loadQuestion();
+            } else {
+                document.getElementById("question").innerHTML = "Quiz Completed 🎉";
+                document.getElementById("options").innerHTML="";
+                document.getElementById("result").innerHTML = `Your Score: ${score} / ${quizData.length}`;
+                saveQuizScore(score);
+            }
+        }
+
+        loadQuestion();
+    </script>
 </body>
-
 </html>
