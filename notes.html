@@ -37,364 +37,1050 @@
         <div id="subject-selection">
             <h1 class="section-title">📚 BCA 1st Year Notes Portal</h1>
             <p class="section-subtitle">Select your subject to explore units and detailed notes.</p>
-            <div class="feature-grid" style="max-width: 600px; margin: auto;">
+            <div class="feature-grid" style="max-width: 800px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 <div class="card" onclick="openUnits('BBC102')" style="cursor: pointer; text-align: center;">
                     <h3 style="color: #60a5fa;">BBC102 - Information Systems</h3>
-                    <p>Click to view Units 1, 2, 3, 4, 5</p>
+                    <p>Click to view available units: 1, 2</p>
+                </div>
+                <div class="card" onclick="openUnits('BBC105')" style="cursor: pointer; text-align: center;">
+                    <h3 style="color: #60a5fa;">BBC105 - Environment and Ecology</h3>
+                    <p>Click to view Unit 1 and more</p>
                 </div>
             </div>
         </div>
 
-        <!-- UNIT SELECTION -->
-        <div id="unit-selection" style="display: none;">
+        <!-- UNIT SELECTION FOR BBC102 -->
+        <div id="unit-selection-BBC102" class="unit-container" style="display: none;">
             <button class="btn-secondary" onclick="backToSubjects()" style="margin-bottom: 20px;">⬅ Back to Subjects</button>
-            <h1 class="section-title" id="subject-title">BBC102 Units</h1>
+            <h1 class="section-title">BBC102 Units</h1>
             <p class="section-subtitle">Select a unit to read complete detailed notes.</p>
             <div class="feature-grid" style="max-width: 800px; margin: auto;">
-                <div class="card" onclick="openNotes('unit1')" style="cursor: pointer;">
+                <div class="card" onclick="openNotes('BBC102', 'unit1')" style="cursor: pointer;">
                     <h3>Unit 1: Foundation of Information Systems</h3>
-                    <p>Introduction, Components, IS Work Cycle, Types, POS Case Study.</p>
+                    <p>Foundation of Information Systems, components, IS work cycle, types of information systems, business problem solving, POS case study, effectiveness and efficiency.</p>
                 </div>
-                <div class="card" onclick="openNotes('unit2')" style="cursor: pointer; border: 2px solid #60a5fa;">
+                <div class="card" onclick="openNotes('BBC102', 'unit2')" style="cursor: pointer; border: 2px solid #60a5fa;">
                     <h3>Unit 2: Management Information Systems (MIS)</h3>
                     <p>Syllabus, Definitions, Concept, Functions, Objectives, Components, Outputs, Advantages, Disadvantages, MIS vs Data Processing, MIS & DSS Complete, Detailed Structure, and Review Q&A.</p>
                 </div>
             </div>
         </div>
 
-        <!-- UNIT 2 EXACT CLEAN CONTENT -->
-        <div id="notes-content-unit2" style="display: none;">
-            <button class="btn-secondary" onclick="backToUnits()" style="margin-bottom: 20px;">⬅ Back to Units</button>
-            <h1 class="section-title">📚 Unit 2: Management Information Systems (MIS)</h1>
-            <p class="section-subtitle">Subject Code: BBC102 | Exact Notes</p>
+        <!-- UNIT SELECTION FOR BBC105 -->
+        <div id="unit-selection-BBC105" class="unit-container" style="display: none;">
+            <button class="btn-secondary" onclick="backToSubjects()" style="margin-bottom: 20px;">⬅ Back to Subjects</button>
+            <h1 class="section-title">BBC105 Units</h1>
+            <p class="section-subtitle">Select a unit to read complete detailed notes.</p>
+            <div class="feature-grid" style="max-width: 800px; margin: auto;">
+                <div class="card" onclick="openNotes('BBC105', 'unit1')" style="cursor: pointer; border: 2px solid #60a5fa;">
+                    <h3>UNIT - I (ENVIRONMENT)</h3>
+                    <p>Introduction, Meaning, Definitions, Functions, Types, Components, Diagrams, Segments, Scope, Importance, Awareness, Ecosystem, Food Chain, Food Web, Ecological Pyramids, Balanced Ecosystem, Human Impacts, EIA, and Sustainable Development (SDGs).</p>
+                </div>
+            </div>
+        </div>
 
-            <!-- 1. Unit 2 Syllabus -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Unit 2 Syllabus</h2>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li>Definition of a Management Information System (MIS)</li>
-                    <li>Objectives of MIS</li>
-                    <li>Components of Management Information System</li>
-                    <li>Functions of MIS</li>
-                    <li>Outputs of a Management Information System</li>
-                    <li>Advantages of MIS</li>
-                    <li>Disadvantages of MIS</li>
-                    <li>MIS versus Data processing</li>
-                    <li>MIS & Decision Support Systems (DSS)</li>
-                    <li>Concept of an MIS</li>
-                    <li>Structure of a Management information system</li>
-                    <li>Review Questions & Answers</li>
+        <!-- NOTES CONTENT FOR BBC102 - UNIT 1 -->
+        <div id="notes-content-BBC102-unit1" class="notes-page" style="display: none;">
+            <button class="btn-secondary" onclick="backToUnits('BBC102')" style="margin-bottom: 20px;">⬅ Back to Units</button>
+            <h1 class="section-title">💻 UNIT - I: FOUNDATION OF INFORMATION SYSTEMS</h1>
+            <p class="section-subtitle">BBC102 Information System — Unit 1 notes based on the provided study material.</p>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Unit I Syllabus</h2>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Foundation of Information Systems:</strong> Introduction to information systems in business, fundamentals of information systems, solving business problems with information systems, types of information systems, and effectiveness and efficiency criteria in information systems.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">1. Information System (IS)</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">An information system is a way to work with information using computers and other technology. It combines different parts such as programs, physical devices and networks.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>Businesses use information systems to collect important data and use it to run operations smoothly.</li>
+                    <li>Information systems help businesses communicate with customers and networks and can help them work better than competitors.</li>
+                    <li>Companies such as eBay, Amazon and Alibaba rely heavily on information systems and technology.</li>
+                    <li>For an information system to work well, it needs proper data input, processing, storage and output.</li>
+                    <li>Organizations also need rules, audits, operational controls, equipment security and user verification.</li>
+                    <li>When managed correctly, information systems allow businesses to effectively use data.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">Examples of Information Systems</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">General information systems provide common services used by many businesses. For example, a database system can organize different kinds of data and help a company understand trends such as which products customers buy at different times. Specialized information systems are designed for a specific business purpose, such as systems used in banking, reservations and hospitals.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">2. Components of Information Systems</h2>
+                <h3 style="color:#38bdf8;">Hardware</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Hardware consists of the physical parts that can be touched, such as computers, keyboards and other devices. Modern storage can also be accessed through networks and cloud services.</p>
+                <h3 style="color:#38bdf8;">Software</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Software consists of programs that run on hardware. System software, such as Windows, supports the computer, while application software, such as Excel, performs specific tasks.</p>
+                <h3 style="color:#38bdf8;">Data</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Data consists of facts and numbers. When data is organized and processed properly, it becomes useful information that businesses can use for decision-making.</p>
+                <h3 style="color:#38bdf8;">Telecommunications</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Telecommunications connects computers and devices so they can share information. Communication may use wires such as fibre-optic cables and other cables, or wireless signals such as radio and microwave signals.</p>
+                <div style="background:rgba(96,165,250,0.08);padding:15px;border-radius:10px;margin-top:15px;color:#cbd5e1;line-height:1.8;"><strong>Core idea:</strong> Information systems combine people, technology, data and processes so that useful information can be collected, processed, stored and communicated.</div>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">3. How Does an Information System Work?</h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:15px 0;">
+                    <div style="padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#38bdf8;">Input</strong><p style="color:#cbd5e1;line-height:1.7;">The system collects data through typing, voice commands, touch screens and sensors. Input may be structured or unstructured.</p></div>
+                    <div style="padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#38bdf8;">Processing</strong><p style="color:#cbd5e1;line-height:1.7;">Raw data is organized through sorting, grouping, searching, analysing and report generation.</p></div>
+                    <div style="padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#38bdf8;">Storage</strong><p style="color:#cbd5e1;line-height:1.7;">Organized data is stored temporarily or permanently in databases, hard drives or solid-state drives.</p></div>
+                    <div style="padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#38bdf8;">Output</strong><p style="color:#cbd5e1;line-height:1.7;">Processed information is presented through reports, dashboards and data visualizations.</p></div>
+                    <div style="padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#38bdf8;">Feedback</strong><p style="color:#cbd5e1;line-height:1.7;">Users provide feedback about their experience, helping measure how well the system is working.</p></div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">4. Types of Information Systems</h2>
+                <h3 style="color:#38bdf8;">1. Management Information Systems (MIS)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">MIS integrates hardware and software to support organizational management functions. It collects data from different systems and provides summarized reports for middle-level management and structured decision-making.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Middle managers</li><li><strong>Examples:</strong> Sales management systems, budgeting systems, inventory control reports</li><li><strong>Features:</strong> Periodic reports, summarized data, support for structured decisions</li></ul>
+
+                <h3 style="color:#38bdf8;">2. Decision Support Systems (DSS)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">DSS supports semi-structured or unstructured decisions by using data, models and analytical tools. It can help managers explore situations that cannot be handled automatically and supports interactive analysis.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Senior managers and analysts</li><li><strong>Examples:</strong> Risk analysis tools, financial planning systems, simulation models</li><li><strong>Features:</strong> Interactive and flexible, uses data from TPS/MIS/external sources, supports “what-if” analysis</li></ul>
+
+                <h3 style="color:#38bdf8;">3. Transaction Processing Systems (TPS)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">TPS processes transactional data and handles day-to-day business transactions and operations.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Operational staff, clerks and supervisors</li><li><strong>Examples:</strong> Sales order entry, payroll systems, inventory management, ATM transactions</li><li><strong>Features:</strong> High volume of data; accuracy and speed are critical; real-time or batch processing</li></ul>
+
+                <h3 style="color:#38bdf8;">4. Customer Relationship Management (CRM)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">CRM systems help organizations view and manage customer information and interactions to guide sales, marketing, customer support and other decisions.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Sales, marketing and customer-service teams</li><li><strong>Examples:</strong> Salesforce, Zoho CRM, HubSpot</li><li><strong>Features:</strong> Tracks customer interactions, manages sales pipeline and supports targeted marketing</li></ul>
+
+                <h3 style="color:#38bdf8;">5. Knowledge Work Systems (KWS)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Knowledge work systems provide useful insights for knowledge workers such as researchers, analysts and consultants. The material describes systems that apply expert-level knowledge to specific problems.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Specialists and professionals</li><li><strong>Examples:</strong> Medical diagnosis systems, credit approval systems, technical troubleshooting systems</li><li><strong>Features:</strong> Knowledge base and inference engine, rule-based “if-then” logic, and ability to explain reasoning</li></ul>
+
+                <h3 style="color:#38bdf8;">6. Supply Chain Management (SCM)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">SCM manages the flow of goods, services, information and finances from suppliers to customers. It covers procurement, production, inventory, transportation and distribution.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;"><li><strong>Users:</strong> Logistics, operations and procurement teams</li><li><strong>Examples:</strong> Order tracking systems, inventory forecasting tools, supplier relationship management</li><li><strong>Features:</strong> Real-time inventory tracking, demand planning, streamlined procurement and delivery</li></ul>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">5. Managing Information Systems</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">Information-system professionals must understand the system’s capabilities and the needs of the business and users. The provided material highlights security, data management, network management, and system updates and upgrades.</p>
+                <h3 style="color:#38bdf8;">Security</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Information systems can face threats such as hacking, viruses, malware and unauthorized access. Security measures include access control, firewalls, intrusion detection and prevention systems, antivirus tools, encryption, security patches, audits, vulnerability assessments and penetration testing.</p>
+                <h3 style="color:#38bdf8;">Data Management</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Ongoing data management maintains accuracy, consistency and integrity. Backup processes help prevent data loss, while structured and organized storage makes data easier to access and analyse.</p>
+                <h3 style="color:#38bdf8;">Network Management</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Administrators monitor and maintain network infrastructure, configure routers, switches and servers correctly, manage traffic to avoid congestion and maintain network security.</p>
+                <h3 style="color:#38bdf8;">System Updates and Upgrades</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Systems should be updated and upgraded regularly. Patch management and monitoring of performance metrics such as CPU and memory usage help identify and troubleshoot problems early.</p>
+                <h3 style="color:#38bdf8;">Helpdesk Support</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Helpdesk support assists users when they face problems using information systems. Knowledge bases, FAQs and chatbots can help users troubleshoot common issues and reduce pressure on the help desk.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">6. Solving Business Problems with Information Systems</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">Information systems help organizations collect, process, analyse and act on data to make better decisions, improve efficiency and gain a competitive edge.</p>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.9;">
+                    <li><strong>Improving Decision Making:</strong> Real-time data and analytics help managers make faster and better decisions. Example: a sales dashboard can show performance by region.</li>
+                    <li><strong>Automating Routine Tasks:</strong> Repetitive processes can be automated to save time and reduce human error. Example: an HR system can calculate payroll, track leave and handle recruitment tasks.</li>
+                    <li><strong>Enhancing Customer Experience:</strong> CRM systems track customer preferences and purchase history to support targeted promotions and personalized service.</li>
+                    <li><strong>Improving Communication and Collaboration:</strong> Project-management and collaboration tools help teams track progress, assign tasks and share updates.</li>
+                    <li><strong>Streamlining Supply Chain and Operations:</strong> SCM systems track inventory, suppliers, shipping and demand so businesses can optimize operations.</li>
+                    <li><strong>Planning for the Future:</strong> Business intelligence and predictive analytics can analyse trends to support future planning.</li>
+                </ol>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">7. Real-World Examples and Case Studies</h2>
+                <h3 style="color:#38bdf8;">Amazon</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">The material describes Amazon as using information systems for inventory management, customer management and personalization, logistics optimization, recommendation algorithms, delivery routing, demand forecasting and data analytics.</p>
+                <h3 style="color:#38bdf8;">Hospital Information System (HIS)</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">A hospital information system helps doctors quickly access patient medical history. The material notes that this can improve patient care and reduce risks such as medication errors or conflicts.</p>
+                <h3 style="color:#38bdf8;">Retail Inventory Management</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">A retail inventory management system can update stock levels in real time and place orders when items are low. It reduces manual work and helps minimize overstock and understock situations.</p>
+                <h3 style="color:#38bdf8;">Coffee Shop POS Case Study</h3>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Problem:</strong> A coffee shop owner notices that profits are lower than expected.</p>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Step 1 — Collect Data:</strong> The POS system tracks daily sales, best-selling items, time of sale and inventory used.</p>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Step 2 — Analyse Data:</strong> Cappuccinos sell well in the morning, croissants sell poorly despite regular purchasing, and afternoon sales are low.</p>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Step 3 — Take Action:</strong> Order fewer croissants, introduce a slow-afternoon promotion and create a morning cappuccino-plus-croissant combo.</p>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Step 4 — Results:</strong> The material reports lower wasted-food cost, increased afternoon sales and improved profits after the changes.</p>
+                <div style="background:rgba(96,165,250,0.08);padding:15px;border-radius:10px;color:#cbd5e1;line-height:1.8;"><strong>Takeaway:</strong> Even a basic POS information system can provide useful insights that help a small business make smarter decisions.</div>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">8. Types of Systems Used to Solve Business Problems</h2>
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;color:#cbd5e1;line-height:1.6;">
+                        <thead><tr style="background:#334155;text-align:left;"><th style="padding:8px;border:1px solid #475569;">System Type</th><th style="padding:8px;border:1px solid #475569;">Purpose</th></tr></thead>
+                        <tbody>
+                            <tr><td style="padding:8px;border:1px solid #475569;">TPS (Transaction Processing System)</td><td style="padding:8px;border:1px solid #475569;">Handles routine, day-to-day operations such as sales, receipts and payroll.</td></tr>
+                            <tr><td style="padding:8px;border:1px solid #475569;">MIS (Management Information System)</td><td style="padding:8px;border:1px solid #475569;">Provides summarized information and reports for mid-level managers.</td></tr>
+                            <tr><td style="padding:8px;border:1px solid #475569;">DSS (Decision Support System)</td><td style="padding:8px;border:1px solid #475569;">Supports complex decision-making with modelling and data analysis.</td></tr>
+                            <tr><td style="padding:8px;border:1px solid #475569;">ERP (Enterprise Resource Planning)</td><td style="padding:8px;border:1px solid #475569;">Integrates departments and functions into a single system.</td></tr>
+                            <tr><td style="padding:8px;border:1px solid #475569;">CRM (Customer Relationship Management)</td><td style="padding:8px;border:1px solid #475569;">Manages interactions with current and potential customers.</td></tr>
+                            <tr><td style="padding:8px;border:1px solid #475569;">SCM (Supply Chain Management)</td><td style="padding:8px;border:1px solid #475569;">Optimizes the flow of goods, information and finances.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">9. Characteristics of an Effective Information System</h2>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.9;">
+                    <li><strong>Speed:</strong> Processes are completed quickly.</li>
+                    <li><strong>Resource Optimization:</strong> Uses computing resources and manual labour efficiently.</li>
+                    <li><strong>Cost-Effectiveness:</strong> Reduces unnecessary expenses such as paper use, staff hours and IT infrastructure costs.</li>
+                    <li><strong>Automation:</strong> Replaces repetitive human tasks with software processes.</li>
+                    <li><strong>Relevance:</strong> Provides information that users actually need.</li>
+                    <li><strong>Timeliness:</strong> Information is available when it is needed.</li>
+                    <li><strong>Accuracy:</strong> Data is correct and reliable.</li>
+                    <li><strong>Usability:</strong> The system is easy to use and understand.</li>
+                    <li><strong>Support for Decision-Making:</strong> Helps managers and employees make informed choices.</li>
                 </ul>
             </div>
 
-            <!-- 2. Definition of MIS -->
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">10. Effectiveness and Efficiency</h2>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Effectiveness</strong> focuses on achieving desired outcomes and meeting strategic goals. It is about <strong>“doing the right things.”</strong> <strong>Efficiency</strong> emphasizes using resources and time to achieve those goals with minimal waste. It is about <strong>“doing things right.”</strong></p>
+                <h3 style="color:#38bdf8;">Effectiveness Criteria</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.9;">
+                    <li><strong>Meeting Strategic Goals:</strong> The information system should contribute to the overall strategic objectives of the organization.</li>
+                    <li><strong>Achieving Desired Outcomes:</strong> It should help users accomplish tasks and support effective decision-making and operations.</li>
+                    <li><strong>Data Quality and Accuracy:</strong> Reliable and accurate data is essential.</li>
+                    <li><strong>User Satisfaction:</strong> Users should be satisfied with the system’s functionality, ease of use and responsiveness.</li>
+                    <li><strong>Return on Investment (ROI):</strong> The system should provide a positive return on the investment made in development and implementation.</li>
+                    <li><strong>Data Integrity and Security:</strong> Data should be protected from unauthorized access and breaches.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">Efficiency Criteria</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.9;">
+                    <li><strong>Cost-Effectiveness:</strong> Minimize development, maintenance and operating costs.</li>
+                    <li><strong>Resource Utilization:</strong> Optimize the use of time, personnel, hardware and software.</li>
+                    <li><strong>Speed and Response Time:</strong> Provide information and perform tasks quickly and efficiently.</li>
+                    <li><strong>Data Transfer Speed:</strong> Data should be transmitted across the network quickly and reliably.</li>
+                    <li><strong>Reduced Training Time:</strong> Easy-to-learn systems save time and resources spent on training.</li>
+                    <li><strong>Automation:</strong> Automating repetitive tasks reduces manual effort and frees users for more strategic work.</li>
+                    <li><strong>Scalability:</strong> Accommodate increasing user demands and data volumes without major disruption.</li>
+                    <li><strong>Manageability:</strong> Easy to monitor, maintain and manage.</li>
+                    <li><strong>Reliability:</strong> Consistently available and dependable.</li>
+                    <li><strong>Interoperability:</strong> Able to integrate with other systems and technologies.</li>
+                    <li><strong>Minimizing Waste:</strong> Avoid unnecessary resource consumption and improve overall performance.</li>
+                </ul>
+                <div style="background:rgba(96,165,250,0.08);padding:15px;border-radius:10px;color:#cbd5e1;line-height:1.8;"><strong>Summary:</strong> Efficiency in information systems is about optimizing resource utilization to achieve desired outcomes with minimal waste, including hardware, network and data-storage efficiency.</div>
+            </div>
+        </div>
+
+        <!-- NOTES CONTENT FOR BBC102 - UNIT 2 -->
+        <div id="notes-content-BBC102-unit2" class="notes-page" style="display: none;">
+            <button class="btn-secondary" onclick="backToUnits('BBC102')" style="margin-bottom: 20px;">⬅ Back to Units</button>
+            <h1 class="section-title">💻 UNIT - II: MANAGEMENT INFORMATION SYSTEMS (MIS)</h1>
+            <p class="section-subtitle">Complete Unit 2 notes: MIS, Data Processing, DSS and MIS Structure.</p>
+
             <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Definition of a Management Information System (MIS)</h2>
-                <p style="color: #cbd5e1; margin-bottom: 20px;">MIS may be defined as the combination of men, machines and procedures for collecting pertinent information from the internal and external source of a firm, and processing these information for the purpose of facilitating the process of decision making.</p>
-                
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Alternative Definitions of MIS</h3>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">The MIS has more than one definition, some of which are given below:</p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                <h2 style="color:#60a5fa;">Unit II Overview</h2>
+                <p style="color:#cbd5e1; line-height:1.8;">An overview of Management Information Systems: definition of a management information system, MIS versus Data Processing, MIS &amp; Decision Support Systems, concept of MIS, and structure of a Management Information System.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Definition of a Management Information System</h2>
+                <p style="color:#cbd5e1; line-height:1.8;"><strong>MIS may be defined as the combination of men, machines and procedures for collecting pertinent information from the internal and external sources of a firm, and processing these information for the purpose of facilitating the process of decision making.</strong></p>
+                <p style="color:#cbd5e1; line-height:1.8;">The MIS has more than one definition:</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
                     <li>The MIS is defined as a system which provides information support for decision making in the organization.</li>
                     <li>The MIS is defined as an integrated system of man and machine for providing the information to support the operations, the management and decision making function in the organization.</li>
-                    <li>The MIS is defined as a Computer-based Information System.</li>
+                    <li>The MIS is defined as a computer-based Information System.</li>
+                </ul>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Concept of MIS:</strong> provide the right information to the right person at the right place at the right time in the right form at the right cost.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Objectives of MIS</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">The purpose of MIS is to determine and provide efficiently, effectively and economically, as far as possible, what management needs to know. It should facilitate the accomplishment of objectives, prevent failure to reach the objectives and correct conditions which hamper the fulfilment of the objectives.</p>
+                <h3 style="color:#38bdf8;">Three Basic Objectives</h3>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Operational Control:</strong> It is the process of assuring that the specific tasks are carried out efficiently and effectively.</li>
+                    <li><strong>Management Control:</strong> It is the process by which managers ensure that resources are obtained and used effectively and efficiently in the accomplishment of organizational objectives.</li>
+                    <li><strong>Strategic Planning:</strong> It is the process of deciding on objectives of the organization, on changes in these objectives and on the policies that govern the acquisition, use and disposition of these resources.</li>
+                </ol>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Components of Management Information System</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">A management information system (MIS) is an organized combination of people, hardware, communication networks and data sources that collects, transforms and distributes information in an organization. An MIS helps decision making by providing timely, relevant and accurate information to managers. The physical components of an MIS include hardware, software, database, personnel and procedures.</p>
+                <h3 style="color:#38bdf8;">Hardware</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">All physical components of a computer system that we can touch or see compose the computer hardware. Important components include the central processing unit, input/output devices, storage units and communication devices. Communication can be over fibre-optic cables or wireless networks.</p>
+                <h3 style="color:#38bdf8;">Software</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Software provides the interface between users and the information system. Software can be divided into two generic types: system software and applications. The system software comprises the operating system, utility programs and special purpose programs. Applications are developed to accomplish a specific task.</p>
+                <h3 style="color:#38bdf8;">Database</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">A database is a centrally controlled collection of organized data. Central control reduces redundancy and duplication of data. Data is stored in an organized and structured way to facilitate sharing and improve availability to those who need it. The database improves efficiency of storage by eliminating redundant files and improves efficiency of processing by providing all required data in a single file rather than separate files. This also improves efficiency of information retrieval.</p>
+                <h3 style="color:#38bdf8;">Procedures</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">Three types of procedures are required for an MIS to operate effectively: user instructions, instructions for input preparation and operating instructions for MIS personnel who maintain the MIS.</p>
+                <h3 style="color:#38bdf8;">Personnel</h3>
+                <p style="color:#cbd5e1;line-height:1.8;">The personnel in the MIS function include computer operators, programmers, systems analysts and managers. Human resource requirements should be assessed by considering both the present system needs and the future system growth. The quality of MIS personnel is a key factor in its effectiveness. An MIS manager needs a combination of both managerial and technical skills.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Outputs of a Management Information System</h2>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Scheduled reports:</strong> Produced periodically, or on a schedule (daily, weekly, monthly).</li>
+                    <li><strong>Key-indicator report:</strong> Summarizes the previous day's critical activities and is typically available at the beginning of each day.</li>
+                    <li><strong>Demand report:</strong> Gives certain information at a manager's request.</li>
+                    <li><strong>Exception report:</strong> Automatically produced when a situation is unusual or requires management action.</li>
                 </ul>
             </div>
 
-            <!-- 3. Concept of Management Information System -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Concept of Management Information System</h2>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">The Concept of management information systems originated in the 1960s and become the byword of almost all attempts to relate computer technology and systems to data processing in business. During the early 1960s, it became evident that the computer was being applied to the solution of business problem in a piecemeal fashion, focusing almost entirely on the computerization of clerical and record-keeping tasks. The MIS concepts are important for efficient and effective computer use in business because of two major reasons:</p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li>It serves as a systems framework for organizing business computer applications. Business applications of computers should be viewed as interrelated and integrated computer-based information systems and not as independent data processing job.</li>
-                    <li>In emphasizes the management orientation of electronics information processing in business. The primary goal of computer based information systems should be the processing of data generated by business operations.</li>
-                </ul>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">A management information system is an integrated man-machine systems that provides information to support the planning and control function of manager in an organization. The output of an MIS is information that sub serves managerial functions. When a system provides information to persons who are not managers, then it will not be considered as part of an MIS. For example, an organization often processes a lot of data which it is required by law to furnish to various government regulatory agencies. Such a system, while it may have interfaces with an MIS, would not be a part of it. Instances of such systems are salary disclosures and excise duty statements.</p>
-                <p style="color: #cbd5e1;"><em>Basic Concept summary:</em> Concept of MIS is to provide right information to the right person at the right place at the right time in the right form at the right cost.</p>
-            </div>
-
-            <!-- 4. Functions of MIS -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Functions of Management Information System</h2>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">Some of the functions can be listed as below,</p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li><strong>data processing:</strong> It includes the collection, transmission, storage, processing and output of data. It simplifies the statistics and reduces to the lowest cost by supplying an unified format.</li>
-                    <li><strong>function of prediction:</strong> It predicts the future situation by applying modern mathematics, statistics or simulation.</li>
-                    <li><strong>function of plan:</strong> It arranges reasonably the plans of each functional department in accordance with the restrictions afforded by enterprises and provides the appropriate planning reports according to different management.</li>
-                    <li><strong>function of control:</strong> It monitors and inspects the operation of plans and comprises with the differences between operation and plan in accordance with the data afforded by every functional department, and be assistant to managers to control timely each method by analyzing the reasons why the difference comes into being.</li>
-                    <li><strong>function of assistance:</strong> It derives instantly the best answers of related problems by applying various of mathematics' mode and analyzing a plentiful data stored in computers in the hope of using rationally human resource, financial resource, material resource and information resource for relative abundant economic benefits.</li>
-                </ul>
-                <p style="color: #cbd5e1;">A management information system is a system that has important tools to support analyse, delivery and adding reliability to any organisation. Also this helps to solve businesses problems. The term MIS is often used to submit to a group of information management methods tied to the support of human decision making, e.g. Decision Support Systems, Expert systems, and Executive information systems.</p>
-            </div>
-
-            <!-- 5. Objectives of MIS -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Objectives of MIS</h2>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">The purpose of MIS is to determine and provide an efficiently, effectively and economically as possible, what management needs to know. It should facilitate the accomplishment of objectives, prevent failure to reach the objectives and correct conditions which hamper the fulfillment of the objectives.</p>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">Three basic objectives of MIS are discussed below:</p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li><strong>(i) Operational Control:</strong> It is the process of assuring that the specific tasks are carried out efficiently and effectively.</li>
-                    <li><strong>(ii) Management Control:</strong> It is the process by which managers ensure that resources are obtained and used effectively and efficiently in the accomplishment of organizational objectives.</li>
-                    <li><strong>(iii) Strategic Planning:</strong> It is the process of deciding on objectives of the organization, on changes in these objectives and on the policies that govern the acquisition, use and disposition of these resources.</li>
-                </ul>
-            </div>
-
-            <!-- 6. Components of Management Information System -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Components of Management Information System</h2>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">A management information system (MIS) is an organized combination of people, hardware, communication networks and data sources that collects, transforms and distributes information in an organization. An MIS helps decision making by providing timely, relevant and accurate information to managers. The physical components of an MIS include hardware, software, database, personnel and procedures.</p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li><strong>Hardware:</strong> All physical components of a computer system that we can touch or see compose the computer hardware. Important components include the central processing unit, input/output devices, storage units and communication devices. Communication can be over fiber-optic cables or wireless networks.</li>
-                    <li><strong>Software:</strong> Software provides the interface between users and the information system. Software can be divided into two generic types: system software and applications. The system software comprises of the operating system, utility programs and special purpose programs. Applications are developed to accomplish a specific task. For users of MIS it is much more important to understand the software than the hardware. Software maintenance can take 50 to 70 percent of all personnel activity in the MIS function. When the organization moves to implement an advanced information system the hardware and software environment becomes more complex.</li>
-                    <li><strong>Database:</strong> A database is a centrally controlled collection of organized data. Central control reduces redundancy and duplication of data. Data is stored in an organized and efficient manner. Structured way to facilitate sharing and improve availability to those who need it. The database improves efficiency of storage by elimination of redundant files and improves efficiency of processing by providing all required data in a single file rather than separate files. This also improves efficiency of information retrieval.</li>
-                    <li><strong>Procedures:</strong> Three types of procedures are required for an MIS to operate effectively: user instructions, instructions for input preparation and operating instructions for MIS personnel who maintain the MIS.</li>
-                    <li><strong>Personnel:</strong> The personnel in the MIS function include computer operators, programmers, systems analysts and managers. Human resource requirements should be assessed by considering both the present system needs and the future system growth. The quality of MIS personnel is a key factor in its effectiveness. An MIS manager needs a combination of both managerial and technical skills.</li>
-                </ul>
-            </div>
-
-            <!-- 7. Outputs of a Management Information System -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Outputs of a Management Information System</h2>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li><strong>Scheduled reports:</strong> Produced periodically, or on a schedule (daily, weekly, monthly)</li>
-                    <li><strong>Key-indicator report:</strong> Summarizes the previous days critical activities. Typically available at the beginning of each day</li>
-                    <li><strong>Demand report:</strong> Gives certain information at a manager's request</li>
-                    <li><strong>Exception report:</strong> Automatically produced when a situation is unusual or requires management action</li>
-                </ul>
-            </div>
-
-            <!-- 8. Advantages of MIS -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Advantages of MIS</h2>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Advantages of MIS</h2>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
                     <li>It facilitates the decision making process by furnishing information in the proper time frame.</li>
                     <li>It provides requisite information at each level of management to carry out their functions.</li>
-                    <li>It helps in highlighting the critical factors to the closely monitored for successful functioning of the organisation.</li>
+                    <li>It helps in highlighting the critical factors to be closely monitored for successful functioning of the organisation.</li>
                     <li>It supports decision-making in both structured and unstructured problem environments.</li>
                     <li>It provides a system of people, computers, documents for collecting, storing, retrieving and transmitting information to the users.</li>
                 </ul>
             </div>
 
-            <!-- 9. Disadvantages of MIS -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Disadvantages of MIS</h2>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li><strong>MIS cannot replace managerial judgements in decision making:</strong> It is merely an effective tool for the managers in decision making and problem solving.</li>
-                    <li><strong>Quality of output:</strong> The quality of output of MIS is directly proportional to the quality of input and processes.</li>
-                    <li><strong>Tailor-made information:</strong> MIS cannot provide tailor made information of packages. It is required to analyze the available information before decision making.</li>
-                    <li><strong>Flexibility:</strong> In a fast changing and complex environment, MIS may not have enough flexibility to update itself quickly.</li>
-                    <li><strong>Quantitative factors:</strong> MIS takes only quantitative factors into account.</li>
-                    <li><strong>Non-programmed decisions:</strong> MIS is less useful for making non-programmed decisions.</li>
-                    <li><strong>Information sharing:</strong> MIS is less effective in organizations where information is not being shared with others.</li>
-                    <li><strong>Organizational changes:</strong> MIS is less effective due to frequent changes in top management, organizational structure and operational staff.</li>
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Disadvantages of MIS</h2>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>MIS cannot replace managerial judgments in decision making. It is merely an effective tool for the managers in decision making and problem solving.</li>
+                    <li>The quality of output of MIS is directly proportional to the quality of input and processes.</li>
+                    <li>MIS cannot provide tailor made information packages. It is required to analyze the available information before decision making.</li>
+                    <li>In a fast changing and complex environment, MIS may not have enough flexibility to update itself quickly.</li>
+                    <li>MIS takes only quantitative factors into account.</li>
+                    <li>MIS is less useful for making non-programmed decisions.</li>
+                    <li>MIS is less effective in organizations where information is not being shared with others.</li>
+                    <li>MIS is less effective due to frequent changes in top management, organizational structure and operational staff.</li>
                 </ul>
             </div>
 
-            <!-- 10. MIS versus Data processing -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">MIS versus Data processing</h2>
-                <p style="color: #cbd5e1; margin-bottom: 10px;"><strong>Data Processing:</strong></p>
-                <ul style="margin-left: 20px; color: #cbd5e1; margin-bottom: 15px; line-height: 1.8;">
-                    <li>Process data includes converting the storage data into the required information to take beneficial actions.</li>
-                    <li>Data processing includes mathematical and logical operations like, calculations, sorting, classifying and summarizing the data.</li>
-                    <li>The data processing signifies processing activities as:
-                        <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>Organize data</li>
-                            <li>Analysis on data</li>
-                            <li>Apply statistical, mathematical, operations</li>
-                            <li>To create predictive modeling</li>
-                            <li>Research and forecasting</li>
-                        </ul>
-                    </li>
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Concept of Management Information System</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">The concept of management information systems originated in the 1960s and became the byword of attempts to relate computer technology and systems to data processing in business. During the early 1960s, it became evident that the computer was being applied to the solution of business problems in a piecemeal fashion, focusing almost entirely on the computerization of clerical and record-keeping tasks.</p>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>It serves as a systems framework for organizing business computer applications. Business applications of computers should be viewed as interrelated and integrated computer-based information systems and not as independent data processing jobs.</li>
+                    <li>It emphasizes the management orientation of electronic information processing in business. The primary goal of computer-based information systems should be the processing of data generated by business operations.</li>
                 </ul>
-                <div style="overflow-x: auto; margin-bottom: 15px;">
-                    <table style="width: 100%; border-collapse: collapse; color: #cbd5e1;">
-                        <thead>
-                            <tr style="background: #334155; text-align: left;">
-                                <th style="padding: 10px; border: 1px solid #475569;">Aspect</th>
-                                <th style="padding: 10px; border: 1px solid #475569;">MIS (Management Information System)</th>
-                                <th style="padding: 10px; border: 1px solid #475569;">Data Processing</th>
-                            </tr>
-                        </thead>
+                <p style="color:#cbd5e1;line-height:1.8;">A management information system is an integrated man-machine system that provides information to support the planning and control function of managers in an organization. The output of an MIS is information that subserves managerial functions.</p>
+                <h3 style="color:#38bdf8;">Functions of MIS</h3>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Data processing:</strong> Includes collection, transmission, storage, processing and output of data. It simplifies statistics and reduces cost by supplying information in a unified format.</li>
+                    <li><strong>Function of prediction:</strong> Predicts the future situation by applying modern mathematics, statistics and simulation.</li>
+                    <li><strong>Function of plan:</strong> Arranges the plans of each functional department according to the restrictions afforded by enterprises and provides appropriate planning reports according to different management.</li>
+                    <li><strong>Function of control:</strong> Monitors and inspects the operation of plans and compares the differences between operation and plan according to the data afforded by every functional department, assisting managers in timely control.</li>
+                    <li><strong>Function of assistance:</strong> Derives answers to related problems by applying mathematical models and analyzing data stored in computers, with the aim of using human, financial, material and information resources rationally.</li>
+                </ol>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">MIS versus Data Processing</h2>
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;color:#cbd5e1;min-width:700px;">
+                        <thead><tr style="background:#334155;text-align:left;">
+                            <th style="padding:8px;border:1px solid #475569;">Aspect</th>
+                            <th style="padding:8px;border:1px solid #475569;">MIS (Management Information System)</th>
+                            <th style="padding:8px;border:1px solid #475569;">Data Processing</th>
+                        </tr></thead>
                         <tbody>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Definition</td><td style="padding: 8px; border: 1px solid #475569;">A system that provides information to support management decisions</td><td style="padding: 8px; border: 1px solid #475569;">The process of collecting, manipulating, and storing data</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Purpose</td><td style="padding: 8px; border: 1px solid #475569;">Helps in decision making, planning, and control</td><td style="padding: 8px; border: 1px solid #475569;">Focuses on processing raw data into usable form</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Focus</td><td style="padding: 8px; border: 1px solid #475569;">Information for managers and decision-makers</td><td style="padding: 8px; border: 1px solid #475569;">Accurate and efficient data handling</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Input</td><td style="padding: 8px; border: 1px solid #475569;">Processed data from various sources</td><td style="padding: 8px; border: 1px solid #475569;">Raw data (e.g., transactions, forms)</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Output</td><td style="padding: 8px; border: 1px solid #475569;">Summarized, analyzed reports (e.g., sales trends, forecasts)</td><td style="padding: 8px; border: 1px solid #475569;">Processed data (e.g., totals, sorted files)</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Users</td><td style="padding: 8px; border: 1px solid #475569;">Managers, executives, analysts</td><td style="padding: 8px; border: 1px solid #475569;">Clerks, data entry operators, IT staff</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Scope</td><td style="padding: 8px; border: 1px solid #475569;">Broader—includes data processing, analysis, and reporting</td><td style="padding: 8px; border: 1px solid #475569;">Narrower—limited to handling data</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">Example</td><td style="padding: 8px; border: 1px solid #475569;">Sales report dashboards, financial summaries</td><td style="padding: 8px; border: 1px solid #475569;">Payroll calculations, inventory entry</td></tr>
-                            <tr><td style="padding: 8px; border: 1px solid #475569;">System Type</td><td style="padding: 8px; border: 1px solid #475569;">Decision support system</td><td style="padding: 8px; border: 1px solid #475569;">Operational/transactional system</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Definition</td><td style="padding:6px;border:1px solid #475569;">A system that provides information to support management decisions</td><td style="padding:6px;border:1px solid #475569;">The process of collecting, manipulating, and storing data</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Purpose</td><td style="padding:6px;border:1px solid #475569;">Helps in decision making, planning, and control</td><td style="padding:6px;border:1px solid #475569;">Focuses on processing raw data into usable form</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Focus</td><td style="padding:6px;border:1px solid #475569;">Information for managers and decision-makers</td><td style="padding:6px;border:1px solid #475569;">Accurate and efficient data handling</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Input</td><td style="padding:6px;border:1px solid #475569;">Processed data from various sources</td><td style="padding:6px;border:1px solid #475569;">Raw data (e.g., transactions, forms)</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Output</td><td style="padding:6px;border:1px solid #475569;">Summarized, analyzed reports (e.g., sales trends, forecasts)</td><td style="padding:6px;border:1px solid #475569;">Processed data (e.g., totals, sorted files)</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Users</td><td style="padding:6px;border:1px solid #475569;">Managers, executives, analysts</td><td style="padding:6px;border:1px solid #475569;">Clerks, data entry operators, IT staff</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Scope</td><td style="padding:6px;border:1px solid #475569;">Broader—includes data processing, analysis, and reporting</td><td style="padding:6px;border:1px solid #475569;">Narrower—limited to handling data</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Example</td><td style="padding:6px;border:1px solid #475569;">Sales report dashboards, financial summaries</td><td style="padding:6px;border:1px solid #475569;">Payroll calculations, inventory entry</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">System Type</td><td style="padding:6px;border:1px solid #475569;">Decision support system</td><td style="padding:6px;border:1px solid #475569;">Operational/transactional system</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p style="color: #cbd5e1; margin-bottom: 5px;"><strong>Summary:</strong></p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li>MIS is an organized way to provide relevant, timely, and accurate information for decision-making.</li>
-                    <li>Data Processing is the technical task of inputting and processing data, often a part of what MIS uses.</li>
+                <h3 style="color:#38bdf8;margin-top:20px;">Data Processing</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>Converts stored data into the required information to take beneficial actions.</li>
+                    <li>Includes mathematical and logical operations like calculations, sorting, classifying and summarizing data.</li>
+                    <li>Activities include organizing data, analysis on data, applying statistical/mathematical operations, creating predictive modelling, and research and forecasting.</li>
+                </ul>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>Summary:</strong> MIS is an organized way to provide relevant, timely and accurate information for decision-making. Data Processing is the technical task of inputting and processing data, often a part of what MIS uses.</p>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Review Questions &amp; Answers</h2>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>What is MIS?</strong><br>MIS stands for Management Information System. It is a system that collects, processes, stores, and distributes information to support managerial decision-making.</li>
+                    <li><strong>What are the key components of MIS?</strong><br>People, Data, Procedures, Software and Hardware.</li>
+                    <li><strong>What is the primary goal of MIS?</strong><br>To provide accurate, timely and relevant information to managers to help them in decision-making, planning and control.</li>
+                    <li><strong>Define Data Processing.</strong><br>Data processing refers to the collection and manipulation of raw data to produce meaningful information, usually using a computer system.</li>
+                    <li><strong>How does MIS differ from Data Processing?</strong><br>Data processing focuses on handling and converting raw data, while MIS uses processed data to generate informative reports that help in decision-making.</li>
+                    <li><strong>What are examples of MIS?</strong><br>Sales report system, Human Resource Information System (HRIS), Inventory control system.</li>
+                    <li><strong>What are the types of MIS?</strong><br>Transaction Processing Systems (TPS), Decision Support Systems (DSS), Executive Information Systems (EIS), Office Automation Systems (OAS).</li>
+                    <li><strong>Why is MIS important in business?</strong><br>MIS helps strategic planning, improves efficiency, reduces costs, and supports data-driven decisions.</li>
+                    <li><strong>What are the stages of data processing?</strong><br>Data Collection, Data Preparation, Data Input, Processing, Output, Storage.</li>
+                    <li><strong>Who uses MIS and who uses data processing systems?</strong><br>MIS is used by managers and executives. Data processing systems are used by clerical and IT staff.</li>
+                    <li><strong>Can data processing exist without MIS?</strong><br>Yes. Data processing can exist as a standalone function (e.g., for payroll), but MIS depends on data processing for input.</li>
+                    <li><strong>What technologies are commonly used in MIS?</strong><br>Databases, spreadsheets, ERP systems, business intelligence tools and dashboards.</li>
+                </ol>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">MIS &amp; Decision Support Systems (DSS)</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">A Decision Support System (DSS) is a computer-based information system that supports business or organizational decision-making activities. It helps users make decisions by analyzing large volumes of data and presenting the information in a way that is easy to understand and interpret.</p>
+                <h3 style="color:#38bdf8;">Key Features of DSS</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Interactive:</strong> Allows users to interact with the system and customize the information they need.</li>
+                    <li><strong>Data-Driven:</strong> Uses large datasets, often from multiple sources.</li>
+                    <li><strong>Analytical Tools:</strong> Includes tools for simulations, forecasting and “what-if” analysis.</li>
+                    <li><strong>User-Oriented:</strong> Designed for non-technical users such as managers.</li>
+                    <li><strong>Supportive, not prescriptive:</strong> Helps make decisions but does not replace human judgment.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">Components of DSS</h3>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Database:</strong> Stores data from internal and external sources.</li>
+                    <li><strong>Model Base:</strong> Contains analytical tools and models such as financial models and risk analysis.</li>
+                    <li><strong>User Interface:</strong> Allows interaction between user and system.</li>
+                    <li><strong>DSS Software System:</strong> Ties everything together for smooth operation.</li>
+                </ol>
+                <h3 style="color:#38bdf8;">Example Use Cases of DSS</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Banking:</strong> Loan approval based on credit history and risk models.</li>
+                    <li><strong>Healthcare:</strong> Diagnosing diseases using patient data and treatment models.</li>
+                    <li><strong>Retail:</strong> Forecasting sales or deciding inventory levels based on historical data.</li>
+                    <li><strong>Logistics:</strong> Choosing optimal transportation routes.</li>
+                    <li><strong>Finance:</strong> Investment planning and portfolio management.</li>
                 </ul>
             </div>
 
-            <!-- 11. Decision Support System (DSS) & Complete Relationship & Analogy -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Decision Support System (DSS) & MIS Relationship</h2>
-                <p style="color: #cbd5e1; font-style: italic; margin-bottom: 5px;">[di-'si-zhan sə-'pørt 'si-stəm]</p>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">A computerized program used to support determinations, judgments, and courses of action in an organization or a business.</p>
-                
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">What is a DSS (Decision Support System)?</h3>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">A Decision Support System (DSS) is a computer-based information system that supports business or organizational decision-making activities. It helps users make decisions by analyzing large volumes of data and presenting the information in a way that is easy to understand and interpret.</p>
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Benefits and Limitations of DSS</h2>
+                <h3 style="color:#38bdf8;">Benefits</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>Improves decision quality.</li>
+                    <li>Saves time and cost.</li>
+                    <li>Enhances productivity.</li>
+                    <li>Supports non-programmed or complex decisions.</li>
+                    <li>Offers “what-if” analysis for better foresight.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">Limitations</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li>Can be expensive to develop and maintain.</li>
+                    <li>May require training for effective use.</li>
+                    <li>Relies on quality of data.</li>
+                    <li>Doesn’t eliminate human error or bias.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">Pros and Cons of a DSS</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+                    <div style="background:rgba(255,255,255,0.04);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color:#60a5fa;">Pros</h4>
+                        <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                            <li>Can help automate decision-making processes.</li>
+                            <li>Handles and sifts through a lot of data.</li>
+                            <li>Leads to efficiencies, quick decision-making and cost-cutting measures.</li>
+                        </ul>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.04);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color:#60a5fa;">Cons</h4>
+                        <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                            <li>May be costly to implement.</li>
+                            <li>May lead to information overload and/or poor quality outputs.</li>
+                            <li>Relying on data eliminates subjectivity in decision-making.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Key Features of DSS:</h3>
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Relationship Between MIS and DSS</h2>
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;color:#cbd5e1;min-width:700px;">
+                        <thead><tr style="background:#334155;text-align:left;">
+                            <th style="padding:8px;border:1px solid #475569;">MIS (Management Information System)</th>
+                            <th style="padding:8px;border:1px solid #475569;">DSS (Decision Support System)</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td style="padding:6px;border:1px solid #475569;">A broad system that includes collecting, storing, and reporting data</td><td style="padding:6px;border:1px solid #475569;">A subsystem or specialized part of MIS focused on supporting decisions</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Provides routine information for management (e.g., reports, summaries)</td><td style="padding:6px;border:1px solid #475569;">Provides non-routine support for complex or unstructured decisions</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Used for operational and tactical decisions</td><td style="padding:6px;border:1px solid #475569;">Used for tactical and strategic decisions</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Based on historical and structured data</td><td style="padding:6px;border:1px solid #475569;">Uses both structured and analytical or simulation models</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Often generates regular reports (daily, monthly, etc.)</td><td style="padding:6px;border:1px solid #475569;">Offers interactive tools, such as “what-if” analysis</td></tr>
+                            <tr><td style="padding:6px;border:1px solid #475569;">Example: Sales reports, HR dashboards</td><td style="padding:6px;border:1px solid #475569;">Example: Risk analysis for launching a new product</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 style="color:#38bdf8;">How They're Related</h3>
+                <ol style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>DSS is a component of MIS</strong> – MIS is the umbrella system, and DSS is one of its tools used for advanced analysis and decision-making.</li>
+                    <li><strong>DSS uses data from MIS</strong> – The processed data generated by MIS (e.g., sales, costs, trends) becomes input for DSS to perform deeper analysis.</li>
+                    <li><strong>Both support decision-making</strong> – MIS provides the base information, while DSS helps in making complex, data-driven decisions.</li>
+                </ol>
+                <div style="background:rgba(96,165,250,0.08);padding:16px;border-left:4px solid #60a5fa;border-radius:8px;margin-top:18px;">
+                    <p style="color:#cbd5e1;line-height:1.8;margin:0;"><strong>Easy example:</strong> Think of MIS as a car's dashboard showing speed, fuel and engine status (basic data). DSS is like GPS with real-time traffic updates—it helps you make strategic decisions like taking a different route.</p>
+                    <p style="color:#cbd5e1;line-height:1.8;margin:12px 0 0;"><strong>Business example:</strong> A company's MIS might generate a report showing declining sales in a region. The DSS would allow managers to run simulations (e.g., “what if we increase advertising in that region?”) to help decide on corrective actions.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:30px;">
+                <h2 style="color:#60a5fa;">Structure of a Management Information System</h2>
+                <p style="color:#cbd5e1;line-height:1.8;">A Management Information System (MIS) structure can be viewed through several lenses, including its operating elements, decision support, management activities, and organizational functions. It can be understood as a combination of physical and conceptual components, with the physical components including hardware, software, and databases, and the conceptual components relating to how the system supports different levels of management.</p>
+                <h3 style="color:#38bdf8;">1. Operating Elements</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Physical Components:</strong> Hardware (computers, peripherals), software (operating systems, applications), and database (where data is stored).</li>
+                    <li><strong>Processing Functions:</strong> Processing transactions, maintaining master files, producing reports, handling inquiries, and supporting interactive applications.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">2. Decision Support</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Transaction Processing Systems (TPS):</strong> Handle routine business transactions, like inventory management or sales processing.</li>
+                    <li><strong>Reporting Systems:</strong> Generate pre-defined reports used for routine monitoring and control.</li>
+                    <li><strong>Decision Support Systems (DSS):</strong> Help managers make non-routine decisions by providing analysis tools and models.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">3. Management Activities</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Strategic Planning:</strong> Focuses on long-term goals and objectives, requiring data for analysis and scenario planning.</li>
+                    <li><strong>Management Control:</strong> Concerned with tactical planning and controlling operational resources.</li>
+                    <li><strong>Operational Planning:</strong> Involves daily activities and control, relying on real-time data and reporting.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">4. Organizational Functions</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Marketing:</strong> MIS can support marketing research, intelligence gathering, and internal record keeping.</li>
+                    <li><strong>Finance:</strong> MIS can support budgeting, forecasting, and financial reporting.</li>
+                    <li><strong>Human Resources:</strong> MIS can support payroll processing, HR management, and talent acquisition.</li>
+                    <li><strong>Production:</strong> MIS can support inventory management, production scheduling, and quality control.</li>
+                </ul>
+                <h3 style="color:#38bdf8;">5. Conceptual Structure</h3>
+                <ul style="margin-left:20px;color:#cbd5e1;line-height:1.8;">
+                    <li><strong>Federation of Functional Areas:</strong> The MIS structure is often seen as a collection of interconnected functional areas, each supporting a specific organizational function.</li>
+                    <li><strong>Hierarchy of Management Activity:</strong> MIS supports different levels of management (strategic, tactical, operational) with varying information needs.</li>
+                    <li><strong>Levels of Control:</strong> The conceptual structure includes strategic, management, operational, and transaction controls.</li>
+                </ul>
+                <p style="color:#cbd5e1;line-height:1.8;"><strong>In essence:</strong> A MIS is a complex system designed to support various levels of management in making informed decisions about an organization's operations.</p>
+            </div>
+        </div>
+
+        <!-- NOTES CONTENT FOR BBC105 - UNIT 1 -->
+        <div id="notes-content-BBC105-unit1" class="notes-page" style="display: none;">
+            <button class="btn-secondary" onclick="backToUnits('BBC105')" style="margin-bottom: 20px;">⬅ Back to Units</button>
+            <h1 class="section-title">🌱 UNIT - I: ENVIRONMENT</h1>
+            
+            <!-- Introduction -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Introduction to Environment</h2>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li>The word Environment is derived from the French word "Environner" which means to surround.</li>
+                    <li>It refers to all the external conditions, surroundings, and influences that affect the life, development, and survival of living organisms (plants, animals, and humans).</li>
+                    <li>It includes both natural and man-made factors.</li>
+                    <li>In simple terms: Environment is everything around us.</li>
+                </ul>
+            </div>
+
+            <!-- Meaning & Definition -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Environment Meaning & Definitions</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Environment can be defined as a sum total of all the living and non-living elements and their effects that influence human life. While all living or biotic elements are animals, plants, forests, fisheries, and birds, non-living or abiotic elements include water, land, sunlight, rocks, and air.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">General Definition</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Environment is the sum total of all living (biotic) and non-living (abiotic) factors that surround and influence an organism.</p>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">According to Boring (1954)</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">"Environment refers to all the conditions, circumstances, and influences that surround and affect the development of an individual organism or group."</p>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">According to UNESCO</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">"Environment is the external conditions, resources, stimuli, etc., with which an organism interacts."</p>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Simple Student-Friendly Definition</h3>
+                <p style="color: #cbd5e1;">Environment is everything that surrounds us - air, water, land, plants, animals, and human beings - and affects our lives.</p>
+            </div>
+
+            <!-- Functions of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Functions of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment plays a very important role in supporting life on Earth. Its main functions are:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Supply of Resources:</strong> Environment provides us with natural resources like air, water, soil, minerals, forests, and fossil fuels. These resources are used for food, clothing, shelter, medicine, energy, and industrial production.</li>
+                    <li><strong>Support of Life:</strong> The environment provides essential elements (oxygen, carbon dioxide, sunlight, water, soil) for the survival of plants, animals, and humans. It maintains the balance of natural cycles like the oxygen cycle, carbon cycle, nitrogen cycle, and water cycle.</li>
+                    <li><strong>Assimilation of Waste:</strong> Environment absorbs and recycles waste materials generated by human activities. Example: Trees absorb carbon dioxide, bacteria decompose organic waste, and rivers dilute and carry away pollutants (to a limit).</li>
+                    <li><strong>Provision of Aesthetic Services:</strong> Environment provides beauty, recreation, and inspiration through mountains, rivers, forests, wildlife, and landscapes. It improves mental and physical well-being by giving people places for relaxation and enjoyment.</li>
+                    <li><strong>Maintenance of Ecological Balance:</strong> Environment maintains the equilibrium among different living organisms and their physical surroundings. It controls climate, weather, biodiversity, and natural processes essential for life.</li>
+                </ul>
+            </div>
+
+            <!-- Types of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Types of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment can be broadly divided into different types depending on its nature.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">ON THE BASIS OF ORIGIN</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Natural Environment:</strong> Includes everything created by nature. Examples: Mountains, rivers, forests, oceans, air, soil, climate, and wildlife. It provides essential resources for life (water, air, food, shelter).</li>
+                    <li><strong>Human-made Environment:</strong> Includes things created or modified by humans using natural resources. Examples: Buildings, roads, dams, parks, industries, bridges, vehicles. These help in development but sometimes cause pollution and environmental problems.</li>
+                    <li><strong>Social/Cultural Environment:</strong> Encompasses human societal structures, traditions, and values.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">ON THE BASIS OF COMPONENT</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Biotic Environment:</strong> Composed of living things (plants, animals, and microorganisms). Interaction between living beings forms ecosystems. Example: Forest ecosystem, pond ecosystem.</li>
+                    <li><strong>Abiotic Environment:</strong> Includes non-living physical factors like air, water, soil, temperature, light, minerals. These factors influence and support living organisms.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">ON THE BASIS OF PHYSICAL DOMAIN</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li>Terrestrial Environment</li>
+                    <li>Aquatic Environment</li>
+                    <li>Atmospheric Environment</li>
+                </ul>
+            </div>
+
+            <!-- Components of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Components of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment is made up of several interconnected components that together support life and shape the planet. Here's a breakdown of the main components:</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Abiotic Components (Non-living)</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">These are the physical and chemical elements of the environment:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Air (Atmosphere):</strong> Oxygen, nitrogen, carbon dioxide, etc.</li>
+                    <li><strong>Water (Hydrosphere):</strong> Oceans, rivers, lakes, groundwater</li>
+                    <li><strong>Soil (Lithosphere):</strong> Minerals, rocks, landforms</li>
+                    <li><strong>Climate & Weather:</strong> Temperature, humidity, rainfall, wind patterns</li>
+                    <li><strong>Sunlight:</strong> Drives photosynthesis and influences climate</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Biotic Components (Living)</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">These include all forms of life:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Producers:</strong> Plants, algae - organisms that make their own food</li>
+                    <li><strong>Consumers:</strong> Animals, humans - organisms that eat other organisms</li>
+                    <li><strong>Decomposers:</strong> Fungi, bacteria - break down dead matter and recycle nutrients</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Human Components</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">Humans interact with and modify the environment:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Urbanization & Infrastructure:</strong> Cities, roads, buildings</li>
+                    <li><strong>Technology & Industry:</strong> Factories, machines, energy production</li>
+                    <li><strong>Culture & Society:</strong> Traditions, laws, education, economy</li>
+                </ul>
+            </div>
+
+            <!-- Components of Environment Diagram / Flowchart -->
+            <div class="card" style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Components of Environment Diagram</h2>
+                <p style="color: #cbd5e1; margin-bottom: 20px;">Visual representation of Natural, Human-made, and Human components of the environment:</p>
+                <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                    <img src="images/environment-components.jpg" alt="Components of Environment Flowchart" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                </div>
+            </div>
+
+            <!-- Segments of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Segments of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment can be divided into several segments, each representing a major sphere of the Earth that interacts with the others to support life and regulate natural processes. Here's a clear breakdown:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Atmosphere - The Air Layer:</strong> Composed of gases like oxygen, nitrogen, carbon dioxide. Protects life by filtering harmful solar radiation. Regulates climate and weather patterns.</li>
+                    <li><strong>Hydrosphere - The Water Realm:</strong> Includes oceans, rivers, lakes, glaciers, groundwater. Essential for all living organisms. Drives the water cycle (evaporation, condensation, precipitation).</li>
+                    <li><strong>Lithosphere - The Solid Earth:</strong> Earth's crust and upper mantle. Contains soil, rocks, minerals, and landforms. Supports terrestrial ecosystems and human infrastructure.</li>
+                    <li><strong>Biosphere - The Living World:</strong> All living organisms: plants, animals, microbes, humans. Interacts with all other segments for survival. Includes ecosystems like forests, deserts, wetlands.</li>
+                    <li><strong>Anthroposphere - The Human Domain:</strong> Human-made environments: cities, industries, agriculture. Influences and alters natural systems. Responsible for both environmental degradation and conservation efforts.</li>
+                </ul>
+            </div>
+
+            <!-- Scope of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Scope of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment covers a vast range of natural and human-made systems. Its scope includes:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Natural Systems:</strong> Ecosystems (Forests, oceans, deserts, wetlands), Biogeochemical Cycles (Water cycle, carbon cycle, nitrogen cycle), Climate Systems (Weather patterns, global warming, monsoons).</li>
+                    <li><strong>Human Interaction:</strong> Urbanization & Industry (Cities, factories, transportation), Agriculture & Land Use (Farming, deforestation, irrigation), Pollution & Waste Management (Air, water, soil pollution).</li>
+                    <li><strong>Environmental Studies & Policies:</strong> Environmental Science (Research on biodiversity, conservation, sustainability), Environmental Laws (Regulations to protect air, water, wildlife), Global Cooperation (Climate treaties, conservation efforts).</li>
+                </ul>
+            </div>
+
+            <!-- Importance of Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Importance of Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The environment is not just a backdrop-it's the foundation of life. Here's why we need it:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Support for Life Systems:</strong> Provides air, water, food, and shelter essential for survival of all living beings.</li>
+                    <li><strong>Ecological Balance:</strong> Maintains harmony among species and ecosystems through natural cycles and interactions.</li>
+                    <li><strong>Climate Regulation:</strong> Controls temperature, rainfall, and weather patterns through atmospheric and oceanic systems.</li>
+                    <li><strong>Water Cycle Maintenance:</strong> Facilitates evaporation, condensation, and precipitation-vital for agriculture and drinking water.</li>
+                    <li><strong>Soil Fertility and Agriculture:</strong> Supplies nutrients and minerals for crop growth and food production.</li>
+                    <li><strong>Biodiversity Conservation:</strong> Protects diverse species of plants, animals, and microorganisms that contribute to ecosystem health.</li>
+                    <li><strong>Human Health and Well-being:</strong> Clean air and water reduce disease; green spaces promote mental and physical wellness.</li>
+                    <li><strong>Economic Resources:</strong> Provides raw materials for industries, energy production, and livelihoods like farming and fishing.</li>
+                    <li><strong>Cultural and Aesthetic Value:</strong> Inspires art, spirituality, and recreation; many cultures are deeply connected to nature.</li>
+                    <li><strong>Sustainability for Future Generations:</strong> Ensures long-term availability of resources and a livable planet for coming generations.</li>
+                </ul>
+            </div>
+
+            <!-- Need for Public Awareness about Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Need for Public Awareness about Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Raising public awareness about the environment is absolutely essential-it's the foundation for meaningful action and long-term sustainability. Here's a breakdown of the need for public awareness about the environment:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Understanding Environmental Issues:</strong> Helps people recognize problems like pollution, deforestation, climate change, and loss of biodiversity. Builds knowledge about causes and consequences of environmental degradation.</li>
+                    <li><strong>Promoting Sustainable Practices:</strong> Encourages eco-friendly habits like recycling, conserving water, and reducing plastic use. Inspires individuals and communities to adopt green technologies and lifestyles.</li>
+                    <li><strong>Strengthening Policy Support:</strong> Informed citizens are more likely to support environmental laws and regulations. Public pressure can lead to stronger government action and accountability.</li>
+                    <li><strong>Protecting Natural Resources:</strong> Awareness fosters respect for forests, rivers, wildlife, and other vital resources. Reduces overexploitation and promotes conservation efforts.</li>
+                    <li><strong>Empowering Youth and Future Generations:</strong> Educates young people to become responsible stewards of the planet. Builds a culture of environmental responsibility from an early age.</li>
+                    <li><strong>Community Participation:</strong> Mobilizes local communities to take part in clean-up drives, tree planting, and awareness campaigns. Creates a sense of collective responsibility and pride.</li>
+                    <li><strong>Improving Public Health:</strong> Educates people about the link between environment and health (e.g., air pollution and respiratory diseases). Promotes cleaner surroundings and healthier living conditions.</li>
+                    <li><strong>Encouraging Research and Innovation:</strong> Awareness drives interest in environmental science and green innovation. Leads to development of sustainable technologies and solutions.</li>
+                    <li><strong>Global Cooperation:</strong> Builds solidarity across borders to tackle global challenges like climate change. Encourages participation in international environmental movements and agreements.</li>
+                    <li><strong>Behavioral Change:</strong> Awareness is the first step toward changing harmful habits. Leads to more conscious consumption, reduced waste, and ethical choices.</li>
+                </ul>
+            </div>
+
+            <!-- Introduction to Ecosystem -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Introduction to Ecosystem</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">An ecosystem is a dynamic community of living organisms such as plants, animals, and microbes-interacting with each other and with their non-living environment, including air, water, and soil. These interactions form a complex web of life where energy flows and nutrients cycle continuously.</p>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Ecosystems can be as vast as a rainforest or ocean, or as small as a pond or a patch of soil. Each ecosystem is unique, yet all share the same basic structure: biotic components (living things) and abiotic components (non-living things). Together, they maintain balance and support life.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Definitions of Ecosystem</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>A.G. Tansley (1935) - Originator of the Term:</strong> "An ecosystem is the system resulting from the interaction of all living organisms with each other and with their physical environment."</li>
+                    <li><strong>E.P. Odum - Father of Modern Ecology:</strong> "An ecosystem is the basic functional unit of ecology, consisting of organisms interacting with each other and with their environment, exchanging energy and matter."</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Types of Ecosystem</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Natural Ecosystems:</strong> These occur naturally without human intervention.
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li><em>Terrestrial Ecosystems:</em> Found on land. Examples: Forest Ecosystem (dense vegetation, rich biodiversity), Grassland Ecosystem (open areas, grasses, grazing animals), Desert Ecosystem (dry climate, sparse vegetation), Mountain Ecosystem (cold climate, unique flora and fauna).</li>
+                            <li><em>Aquatic Ecosystems:</em> Found in water bodies. Examples: Freshwater Ecosystem (rivers, lakes, ponds), Marine Ecosystem (oceans, seas, coral reefs), Estuarine Ecosystem (where rivers meet the sea; highly productive).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Artificial (Man-Made) Ecosystems:</strong> Created and maintained by humans. Urban Ecosystem (cities and towns with human infrastructure), Agricultural Ecosystem (farmlands, crop fields, irrigation systems), Aquaculture Ecosystem (fish farms, artificial ponds).</li>
+                    <li><strong>Micro and Macro Ecosystems:</strong> Micro Ecosystem (small-scale, like a garden, aquarium, or a tree trunk), Macro Ecosystem (large-scale, like a rainforest or ocean).</li>
+                </ul>
+            </div>
+
+            <!-- Structure of Ecosystem -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Structure of Ecosystem</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The structure of an ecosystem refers to the way its components are organized and interact to sustain life. It includes both living organisms and non-living elements, forming a complex web of relationships. Here's a detailed breakdown:</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Abiotic Components (Non-living)</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">These are the physical and chemical factors that influence life in the ecosystem:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Sunlight:</strong> Primary source of energy</li>
+                    <li><strong>Temperature:</strong> Affects metabolic rates and species distribution</li>
+                    <li><strong>Water:</strong> Essential for all life processes</li>
+                    <li><strong>Soil:</strong> Provides nutrients and habitat for plants and microbes</li>
+                    <li><strong>Air:</strong> Contains gases like oxygen and carbon dioxide</li>
+                    <li><strong>Minerals:</strong> Support plant growth and biochemical cycles</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Biotic Components (Living)</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">These are the organisms that interact within the ecosystem:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Producers (Autotrophs):</strong> Usually green plants and algae. Convert solar energy into chemical energy via photosynthesis.</li>
+                    <li><strong>Consumers (Heterotrophs):</strong> 
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Primary consumers: Herbivores (e.g., deer, rabbits)</li>
+                            <li>Secondary consumers: Carnivores that eat herbivores (e.g., foxes)</li>
+                            <li>Tertiary consumers: Top predators (e.g., lions, eagles)</li>
+                            <li>Omnivores: Eat both plants and animals (e.g., humans, bears)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Decomposers:</strong> Fungi, bacteria, and some insects. Break down dead organisms and recycle nutrients back into the ecosystem.</li>
+                </ul>
+            </div>
+
+            <!-- Food Chains -->
+            <div class="card" style="margin-bottom: 30px; text-align: center;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Food Chains</h2>
+                <p style="color: #cbd5e1; margin-bottom: 20px;">Visual representation of energy flow from producers to primary consumers, secondary consumers, tertiary consumers, apex predators, and decomposers:</p>
+                <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                    <img src="images/food-chains.jpg" alt="Food Chains Diagram" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                </div>
+            </div>
+
+            <!-- Food Chain Details -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">FOOD CHAIN</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">A food chain is a linear sequence that shows how energy and nutrients flow from one organism to another in an ecosystem. It illustrates who eats whom, starting from producers and moving up to top predators.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Basic Structure of a Food Chain</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Producers (Autotrophs):</strong> Usually green plants or algae. Convert sunlight into energy through photosynthesis.</li>
+                    <li><strong>Primary Consumers (Herbivores):</strong> Eat producers. Examples: deer, rabbits, grasshoppers.</li>
+                    <li><strong>Secondary Consumers (Carnivores):</strong> Eat herbivores. Examples: snakes, frogs, small birds.</li>
+                    <li><strong>Tertiary Consumers (Top Carnivores):</strong> Eat secondary consumers. Examples: hawks, lions, sharks.</li>
+                    <li><strong>Decomposers:</strong> Break down dead organisms and recycle nutrients. Examples: fungi, bacteria, earthworms.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Key Features of a Food Chain</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li>Unidirectional flow of energy (from sun to producers to consumers)</li>
+                    <li>Energy decreases at each trophic level</li>
+                    <li>Simplified view of feeding relationships (real ecosystems are more complex)</li>
+                </ul>
+            </div>
+
+            <!-- Food Web Image -->
+            <div class="card" style="margin-bottom: 30px; text-align: center;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Food Web</h2>
+                <p style="color: #cbd5e1; margin-bottom: 20px;">Visual representation of interconnected feeding relationships in an ecosystem:</p>
+                <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                    <img src="images/food-web.jpg" alt="Food Web Diagram" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                </div>
+            </div>
+
+            <!-- Food Web Details -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">FOOD WEB</h2>
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">What Is a Food Web?</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">A food web is a diagram or model that shows how multiple food chains in an ecosystem connect and overlap. It illustrates the transfer of energy and matter from one organism to another through consumption.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Food Web Definition:</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">A food web is a system of interdependent food chains within an ecological community, showing the network of feeding relationships among organisms.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Components of a Food Web</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Producers (Autotrophs):</strong> Organisms that make their own food through photosynthesis or chemosynthesis (e.g., plants, algae).</li>
+                    <li><strong>Consumers (Heterotrophs):</strong> Primary consumers (herbivores), Secondary consumers (carnivores), Tertiary consumers (top predators), and Omnivores (feed at multiple levels).</li>
+                    <li><strong>Decomposers and Detritivores:</strong> Break down dead organisms, recycling nutrients back into the ecosystem (e.g., fungi, bacteria, earthworms).</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Trophic Levels & Energy Flow</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Trophic Levels:</strong> Energy levels in a food web, typically forming a pyramid structure from producers to top predators.</li>
+                    <li><strong>Energy Flow:</strong> Arrows in food webs show the direction of energy transfer, from prey to predator.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Food Web vs. Food Chain</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Though closely related, food webs and food chains convey different views of ecological relationships. A food chain simplifies energy flow into a straight path, while a food web reflects the complexity and interdependence found in nature. A food web includes all of the food chains within an ecosystem.</p>
                 <div style="overflow-x: auto; margin-bottom: 15px;">
                     <table style="width: 100%; border-collapse: collapse; color: #cbd5e1;">
                         <thead>
                             <tr style="background: #334155; text-align: left;">
                                 <th style="padding: 8px; border: 1px solid #475569;">Feature</th>
-                                <th style="padding: 8px; border: 1px solid #475569;">Description</th>
+                                <th style="padding: 8px; border: 1px solid #475569;">Food Chain</th>
+                                <th style="padding: 8px; border: 1px solid #475569;">Food Web</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Interactive</td><td style="padding: 6px; border: 1px solid #475569;">Allows users to interact with the system and customize the information they need.</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Data-Driven</td><td style="padding: 6px; border: 1px solid #475569;">Uses large datasets, often from multiple sources.</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Analytical Tools</td><td style="padding: 6px; border: 1px solid #475569;">Includes tools for simulations, forecasting, and "what-if" analysis.</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">User-Oriented</td><td style="padding: 6px; border: 1px solid #475569;">Designed for non-technical users (e.g., managers).</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Supportive, not prescriptive</td><td style="padding: 6px; border: 1px solid #475569;">Helps make decisions but doesn't replace human judgment.</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">Structure</td><td style="padding: 6px; border: 1px solid #475569;">Linear sequence</td><td style="padding: 6px; border: 1px solid #475569;">Interconnected network</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">Complexity</td><td style="padding: 6px; border: 1px solid #475569;">Simple and singular</td><td style="padding: 6px; border: 1px solid #475569;">Complex with multiple overlapping chains</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">Stability</td><td style="padding: 6px; border: 1px solid #475569;">More fragile to disruption</td><td style="padding: 6px; border: 1px solid #475569;">More resilient due to redundancy</td></tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Components of DSS:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li><strong>Database:</strong> Stores data from internal and external sources</li>
-                    <li><strong>Model Base:</strong> Contains analytical tools and models (e.g., financial models, risk analysis)</li>
-                    <li><strong>User Interface:</strong> Allows interaction between user and system</li>
-                    <li><strong>DSS Software System:</strong> Ties everything together for smooth operation</li>
+            <!-- Ecological Pyramid Section -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Ecological Pyramid</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;"><strong>What is an Ecological Pyramid?</strong><br>An ecological pyramid is a graphical representation that shows the relationship between different trophic levels in an ecosystem, illustrating the distribution of energy, biomass, or number of organisms at each level.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Types of Ecological Pyramid</h3>
+                
+                <!-- 1. Pyramid of Numbers -->
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Pyramid of Numbers:</strong> Shows the number of individual organisms at each trophic level. Usually upright except for situations like a detritus food chain where many organisms feed on one dead plant/animal.</li>
+                </ul>
+                <div style="text-align: center; margin: 15px 0;">
+                    <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                        <img src="images/pyramid-of-numbers.jpg" alt="Pyramid of Numbers Diagram" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                    </div>
+                </div>
+                
+                <!-- 2. Pyramid of Biomass -->
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Pyramid of Biomass:</strong> Represents the total mass of living matter at each level. Usually upright except in oceans where large numbers of zooplanktons depend on a smaller number of phytoplanktons.</li>
+                </ul>
+                <div style="text-align: center; margin: 15px 0;">
+                    <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                        <img src="images/pyramid-of-biomass.jpg" alt="Pyramid of Biomass in Oceans Diagram" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                    </div>
+                </div>
+
+                <!-- 3. Pyramid of Energy -->
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Pyramid of Energy:</strong> Pyramid of energy is the <em>only</em> type of ecological pyramid which is always upright, as the energy flow in a food chain is always unidirectional, and with every increasing trophic level, some energy is lost into the environment.</li>
+                </ul>
+                <div style="text-align: center; margin: 15px 0;">
+                    <div style="background: #0f172a; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; max-width: 100%;">
+                        <img src="images/pyramid-of-energy.jpg" alt="Pyramid of Energy Diagram" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: auto;">
+                    </div>
+                </div>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px; margin-top: 20px;">Importance of Ecological Pyramid</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 20px;">
+                    <li>They show the feeding of different organisms in different ecosystems.</li>
+                    <li>It shows the efficiency of energy transfer.</li>
+                    <li>The condition of the ecosystem can be monitored, and any further damage can be prevented.</li>
                 </ul>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Example Use Cases of DSS:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li><strong>Banking:</strong> Loan approval based on credit history and risk models</li>
-                    <li><strong>Healthcare:</strong> Diagnosing diseases using patient data and treatment models</li>
-                    <li><strong>Retail:</strong> Forecasting sales or deciding inventory levels based on historical data</li>
-                    <li><strong>Logistics:</strong> Choosing optimal transportation routes</li>
-                    <li><strong>Finance:</strong> Investment planning and portfolio management</li>
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Limitations of Ecological Pyramid</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li>More than one species may occupy multiple trophic levels as in the case of food webs. Thus, this system does not take into account food webs.</li>
+                    <li>The saprophytes are not considered in any of the pyramids even though they form an important part of the various ecosystems.</li>
+                    <li>These pyramids are applicable only to simple food chains, which usually do not occur naturally.</li>
+                    <li>These pyramids do not deliver any concept in relation to variations in season and climate.</li>
+                    <li>They do not consider the possibility of the existence of the same species at different levels.</li>
+                </ul>
+            </div>
+
+            <!-- Balanced Ecosystem -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Balanced Ecosystem</h2>
+                <p style="color: #cbd5e1; line-height: 1.8;">A balanced ecosystem represents a sustainable habitat of interdependent animals, plants, and microorganisms and their environment. Balanced ecosystems display efficient energy and material cycling and interconnectedness between primary producers and predators.</p>
+            </div>
+
+            <!-- Impact Due to Different Human Activities on Environment -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Impact Due to Different Human Activities on Environment</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Human activities—while essential for development and survival—have profound and often damaging effects on the environment. Here's a breakdown of how each area impacts nature:</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Food & Agriculture</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Deforestation for farmland reduces biodiversity and carbon absorption.</li>
+                    <li>Pesticides and fertilizers contaminate soil and water.</li>
+                    <li>Overgrazing by livestock leads to soil erosion and desertification.</li>
+                    <li>Monoculture farming depletes soil nutrients and increases vulnerability to pests.</li>
                 </ul>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Benefits of DSS:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li>Improves decision quality</li>
-                    <li>Saves time and cost</li>
-                    <li>Enhances productivity</li>
-                    <li>Supports non-programmed or complex decisions</li>
-                    <li>Offers "what-if" analysis for better foresight</li>
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Shelter & Housing</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Urban sprawl consumes natural habitats and agricultural land.</li>
+                    <li>Construction materials like cement and steel have high carbon footprints.</li>
+                    <li>Energy use in homes contributes to greenhouse gas emissions.</li>
+                    <li>Waste generation from households strains landfills and water systems.</li>
                 </ul>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Limitations of DSS:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li>Can be expensive to develop and maintain</li>
-                    <li>May require training for effective use</li>
-                    <li>Relies on quality of data</li>
-                    <li>Doesn't eliminate human error or bias</li>
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Industry</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Air and water pollution from factories harms ecosystems and human health.</li>
+                    <li>Resource extraction depletes non-renewable materials.</li>
+                    <li>Industrial waste often contains toxic substances that contaminate soil and water.</li>
+                    <li>Carbon emissions from manufacturing drive climate change.</li>
                 </ul>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Pros and Cons of a DSS:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li><strong>Pros:</strong> Can help automate decision-making processes, handles and sifts through a lot of data, leads to efficiencies, quick decision-making, cost-cutting measures</li>
-                    <li><strong>Cons:</strong> May be costly to implement, may lead to information overload and/or poor quality outputs, relying on data eliminates subjectivity in decision-making</li>
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Mining</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Habitat destruction and landscape alteration are common.</li>
+                    <li>Water pollution from runoff and tailings affects aquatic life.</li>
+                    <li>Air pollution from dust and machinery impacts local communities.</li>
+                    <li>Soil degradation makes land unusable for agriculture or habitation.</li>
                 </ul>
 
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Relationship Between MIS and DSS:</h3>
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Transportation</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Fossil fuel combustion releases CO₂, NOx, and particulate matter.</li>
+                    <li>Infrastructure development (roads, airports) fragments ecosystems.</li>
+                    <li>Noise pollution disrupts wildlife behavior.</li>
+                    <li>Oil spills and runoff from vehicles contaminate water bodies.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Economic Activities</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Overconsumption leads to resource depletion and waste.</li>
+                    <li>Global trade increases carbon emissions through transportation.</li>
+                    <li>Economic inequality can lead to environmental exploitation in poorer regions.</li>
+                    <li>Unsustainable growth models often ignore ecological limits.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Social Security & Welfare</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 12px;">
+                    <li>Population growth driven by improved healthcare increases demand for resources.</li>
+                    <li>Urbanization linked to better services can strain local ecosystems.</li>
+                    <li>Policy decisions may prioritize short-term human welfare over long-term sustainability.</li>
+                    <li>Increased consumption from rising living standards intensifies environmental pressure.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 8px;">Overall Impact</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">These activities contribute to:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li>Climate change</li>
+                    <li>Loss of biodiversity</li>
+                    <li>Pollution of air, water, and soil</li>
+                    <li>Resource depletion</li>
+                    <li>Environmental degradation</li>
+                </ul>
+            </div>
+
+            <!-- Environmental Impact Assessment (EIA) -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Environmental Impact Assessment (EIA)</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Environmental Impact Assessment (EIA) is a critical process used to evaluate the potential environmental consequences of a proposed project or development before it begins. It ensures that decision-makers consider environmental effects alongside economic and social factors, promoting sustainable development.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Definition</h3>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">According to UNEP, EIA is a tool used to identify a project's environmental, social, and economic impacts prior to decision-making.</p>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Key Objectives</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li>Predict environmental impacts early in project planning.</li>
+                    <li>Minimize adverse effects through mitigation strategies.</li>
+                    <li>Shape projects to suit local environmental conditions.</li>
+                    <li>Inform decision-makers with scientific and community input.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Steps in the EIA Process</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
+                    <li><strong>Screening:</strong> Determines if a project requires EIA.</li>
+                    <li><strong>Scoping:</strong> Identifies key environmental issues and impacts.</li>
+                    <li><strong>Baseline Data Collection:</strong> Assesses current environmental conditions.</li>
+                    <li><strong>Impact Prediction:</strong> Forecasts potential changes due to the project.</li>
+                    <li><strong>Mitigation Measures:</strong> Proposes ways to reduce negative impacts.</li>
+                    <li><strong>Public Consultation:</strong> Engages stakeholders and communities.</li>
+                    <li><strong>Reporting:</strong> Compiles findings in an Environmental Impact Statement (EIS).</li>
+                    <li><strong>Review & Decision:</strong> Authorities evaluate the report and approve or reject the project.</li>
+                    <li><strong>Monitoring:</strong> Ensures compliance and tracks actual impacts.</li>
+                </ul>
+            </div>
+
+            <!-- Sustainable Development -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Sustainable Development</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Sustainable development is a guiding principle for balancing human progress with environmental protection. It means meeting the needs of the present without compromising the ability of future generations to meet their own needs.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Key Pillars of Sustainable Development</h3>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Environmental Sustainability:</strong> Protecting ecosystems and biodiversity, reducing pollution/carbon emissions, promoting renewable energy and conservation.</li>
+                    <li><strong>Economic Sustainability:</strong> Encouraging responsible growth and innovation, reducing poverty and inequality, supporting green jobs and circular economies.</li>
+                    <li><strong>Social Sustainability:</strong> Ensuring access to education, healthcare, and justice; promoting gender equality and human rights; building inclusive and resilient communities.</li>
+                </ul>
+
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">Why It Matters</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">Without sustainable development:</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 10px;">
+                    <li>Natural resources will be depleted</li>
+                    <li>Climate change will intensify</li>
+                    <li>Social and economic inequalities will grow</li>
+                </ul>
+                <p style="color: #cbd5e1;">With it, we can create a world that thrives economically, socially, and ecologically.</p>
+            </div>
+
+            <!-- Global Framework: The 17 Sustainable Development Goals (SDGs) -->
+            <div class="card">
+                <h2 style="color: #60a5fa; margin-bottom: 15px;">Global Framework: The 17 Sustainable Development Goals (SDGs)</h2>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">The 17 Sustainable Development Goals (SDGs) are a global blueprint adopted by all United Nations member states in 2015 as part of the 2030 Agenda for Sustainable Development. These goals aim to end poverty, protect the planet, and ensure peace and prosperity for all.</p>
+                
+                <h3 style="color: #38bdf8; margin-bottom: 10px;">The 17 SDGs at a Glance</h3>
                 <div style="overflow-x: auto; margin-bottom: 15px;">
                     <table style="width: 100%; border-collapse: collapse; color: #cbd5e1;">
                         <thead>
                             <tr style="background: #334155; text-align: left;">
-                                <th style="padding: 8px; border: 1px solid #475569;">MIS (Management Information System)</th>
-                                <th style="padding: 8px; border: 1px solid #475569;">DSS (Decision Support System)</th>
+                                <th style="padding: 8px; border: 1px solid #475569;">Goal No.</th>
+                                <th style="padding: 8px; border: 1px solid #475569;">Title</th>
+                                <th style="padding: 8px; border: 1px solid #475569;">Focus Area</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">A broad system that includes collecting, storing, and reporting data</td><td style="padding: 6px; border: 1px solid #475569;">A subsystem or specialized part of MIS focused on supporting decisions</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Provides routine information for management (e.g., reports, summaries)</td><td style="padding: 6px; border: 1px solid #475569;">Provides non-routine support for complex or unstructured decisions</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Used for operational and tactical decisions</td><td style="padding: 6px; border: 1px solid #475569;">Used for tactical and strategic decisions</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Based on historical and structured data</td><td style="padding: 6px; border: 1px solid #475569;">Uses both structured and analytical or simulation models</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Often generates regular reports (daily, monthly, etc.)</td><td style="padding: 6px; border: 1px solid #475569;">Offers interactive tools, such as "what-if" analysis</td></tr>
-                            <tr><td style="padding: 6px; border: 1px solid #475569;">Example: Sales reports, HR dashboards</td><td style="padding: 6px; border: 1px solid #475569;">Example: Risk analysis for launching a new product</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">1</td><td style="padding: 6px; border: 1px solid #475569;">No Poverty</td><td style="padding: 6px; border: 1px solid #475569;">End poverty in all its forms everywhere</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">2</td><td style="padding: 6px; border: 1px solid #475569;">Zero Hunger</td><td style="padding: 6px; border: 1px solid #475569;">End hunger, achieve food security, and promote sustainable agriculture</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">3</td><td style="padding: 6px; border: 1px solid #475569;">Good Health and Wellbeing</td><td style="padding: 6px; border: 1px solid #475569;">Ensure healthy lives and promote well-being for all ages</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">4</td><td style="padding: 6px; border: 1px solid #475569;">Quality Education</td><td style="padding: 6px; border: 1px solid #475569;">Ensure inclusive and equitable education and lifelong learning</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">5</td><td style="padding: 6px; border: 1px solid #475569;">Gender Equality</td><td style="padding: 6px; border: 1px solid #475569;">Achieve gender equality and empower all women and girls</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">6</td><td style="padding: 6px; border: 1px solid #475569;">Clean Water and Sanitation</td><td style="padding: 6px; border: 1px solid #475569;">Ensure availability and sustainable management of water and sanitation</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">7</td><td style="padding: 6px; border: 1px solid #475569;">Affordable and Clean Energy</td><td style="padding: 6px; border: 1px solid #475569;">Access to reliable, sustainable, and modern energy</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">8</td><td style="padding: 6px; border: 1px solid #475569;">Decent Work and Economic Growth</td><td style="padding: 6px; border: 1px solid #475569;">Promote inclusive and sustainable economic growth and employment</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">9</td><td style="padding: 6px; border: 1px solid #475569;">Industry, Innovation and Infrastructure</td><td style="padding: 6px; border: 1px solid #475569;">Build resilient infrastructure and foster innovation</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">10</td><td style="padding: 6px; border: 1px solid #475569;">Reduced Inequality</td><td style="padding: 6px; border: 1px solid #475569;">Reduce inequality within and among countries</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">11</td><td style="padding: 6px; border: 1px solid #475569;">Sustainable Cities and Communities</td><td style="padding: 6px; border: 1px solid #475569;">Make cities inclusive, safe, resilient, and sustainable</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">12</td><td style="padding: 6px; border: 1px solid #475569;">Responsible Consumption and Production</td><td style="padding: 6px; border: 1px solid #475569;">Ensure sustainable consumption and production patterns</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">13</td><td style="padding: 6px; border: 1px solid #475569;">Climate Action</td><td style="padding: 6px; border: 1px solid #475569;">Take urgent action to combat climate change and its impacts</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">14</td><td style="padding: 6px; border: 1px solid #475569;">Life Below Water</td><td style="padding: 6px; border: 1px solid #475569;">Conserve and sustainably use oceans and marine resources</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">15</td><td style="padding: 6px; border: 1px solid #475569;">Life on Land</td><td style="padding: 6px; border: 1px solid #475569;">Protect ecosystems, forests, and biodiversity</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">16</td><td style="padding: 6px; border: 1px solid #475569;">Peace, Justice and Strong Institutions</td><td style="padding: 6px; border: 1px solid #475569;">Promote peaceful and inclusive societies</td></tr>
+                            <tr><td style="padding: 6px; border: 1px solid #475569;">17</td><td style="padding: 6px; border: 1px solid #475569;">Partnerships for the Goals</td><td style="padding: 6px; border: 1px solid #475569;">Strengthen global partnerships to support sustainable development</td></tr>
                         </tbody>
                     </table>
                 </div>
-
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">How They're Related:</h3>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 15px;">
-                    <li><strong>DSS is a component of MIS:</strong> MIS is the umbrella system, and DSS is one of its tools used for advanced analysis and decision-making.</li>
-                    <li><strong>DSS uses data from MIS:</strong> The processed data generated by MIS (e.g., sales, costs, trends) becomes input for DSS to perform deeper analysis.</li>
-                    <li><strong>Both support decision-making:</strong> MIS provides the base information, while DSS helps in making complex, data-driven decisions.</li>
-                </ul>
-
-                <h3 style="color: #38bdf8; margin-bottom: 10px;">Analogy & Example:</h3>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">Think of MIS as a car's dashboard showing speed, fuel, and engine status (basic data). DSS is like GPS with real-time traffic updates – it helps you make strategic decisions like taking a different route.</p>
-                <p style="color: #cbd5e1; margin-bottom: 5px;"><strong>Example:</strong></p>
-                <ul style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li>A company's MIS might generate a report showing declining sales in a region.</li>
-                    <li>The DSS would allow managers to run simulations (e.g., "what if we increase advertising in that region?") to help decide on corrective actions.</li>
-                </ul>
-            </div>
-
-            <!-- 12. Structure of a Management Information System (Detailed Breakdown) -->
-            <div class="card" style="margin-bottom: 30px;">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Structure of a Management Information System</h2>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">A Management Information System (MIS) structure can be viewed through several lenses, including its operating elements, decision support, management activities, and organizational functions.</p>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">It can be understood as a combination of physical and conceptual components, with the physical components including hardware, software, and databases, and the conceptual components relating to how the system supports different levels of management.</p>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">Here's a more detailed breakdown:</p>
-
-                <ol style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li style="margin-bottom: 12px;"><strong>Operating Elements:</strong><br>
-                        - <em>Physical Components:</em> These include the hardware (computers, peripherals), software (operating systems, applications), and the database (where data is stored).<br>
-                        - <em>Processing Functions:</em> This involves processing transactions, maintaining master files, producing reports, handling inquiries, and supporting interactive applications.
-                    </li>
-                    <li style="margin-bottom: 12px;"><strong>Decision Support:</strong><br>
-                        - <em>Transaction Processing Systems (TPS):</em> These systems handle routine business transactions, like inventory management or sales processing.<br>
-                        - <em>Reporting Systems:</em> These generate pre-defined reports that are used for routine monitoring and control.<br>
-                        - <em>Decision Support Systems (DSS):</em> These systems help managers make non-routine decisions by providing analysis tools and models.
-                    </li>
-                    <li style="margin-bottom: 12px;"><strong>Management Activities:</strong><br>
-                        - <em>Strategic Planning:</em> Focuses on long-term goals and objectives, requiring data for analysis and scenario planning.<br>
-                        - <em>Management Control:</em> Concerned with tactical planning and controlling operational resources.<br>
-                        - <em>Operational Planning:</em> Involves daily activities and control, relying on real-time data and reporting.
-                    </li>
-                    <li style="margin-bottom: 12px;"><strong>Organizational Functions:</strong><br>
-                        - <em>Marketing:</em> MIS can support marketing research, intelligence gathering, and internal record keeping.<br>
-                        - <em>Finance:</em> MIS can support budgeting, forecasting, and financial reporting.<br>
-                        - <em>Human Resources:</em> MIS can support payroll processing, HR management, and talent acquisition.<br>
-                        - <em>Production:</em> MIS can support inventory management, production scheduling, and quality control.
-                    </li>
-                    <li style="margin-bottom: 12px;"><strong>Conceptual Structure:</strong><br>
-                        - <em>Federation of Functional Areas:</em> The MIS structure is often seen as a collection of interconnected functional areas, each supporting a specific organizational function.<br>
-                        - <em>Hierarchy of Management Activity:</em> MIS supports different levels of management (strategic, tactical, operational) with varying information needs.<br>
-                        - <em>Levels of Control:</em> The conceptual structure includes strategic, management, operational, and transaction controls.
-                    </li>
-                </ol>
-                <p style="color: #cbd5e1; margin-top: 15px;">In essence, a MIS is a complex system designed to provide information to support various levels of management in making informed decisions about an organization's operations.</p>
-            </div>
-
-            <!-- 13. Summarized Review Questions & Answers -->
-            <div class="card">
-                <h2 style="color: #60a5fa; margin-bottom: 15px;">Some Summarized Very Questions (Review Q&A Bank)</h2>
-                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 15px;">Elaborate or extend the answers with your own examples, facts and figures.</p>
-                <ol style="margin-left: 20px; color: #cbd5e1; line-height: 1.8;">
-                    <li style="margin-bottom: 12px;"><strong>What is MIS?</strong><br>Answer: MIS stands for Management Information System. It is a system that collects, processes, stores, and distributes information to support managerial decision-making.</li>
-                    <li style="margin-bottom: 12px;"><strong>What are the key components of MIS?</strong><br>Answer: People, Data, Procedures, Software, Hardware.</li>
-                    <li style="margin-bottom: 12px;"><strong>What is the primary goal of MIS?</strong><br>Answer: To provide accurate, timely, and relevant information to managers to help them in decision-making, planning, and control.</li>
-                    <li style="margin-bottom: 12px;"><strong>Define Data Processing.</strong><br>Answer: Data processing refers to the collection and manipulation of raw data to produce meaningful information, usually using a computer system.</li>
-                    <li style="margin-bottom: 12px;"><strong>How does MIS differ from Data Processing?</strong><br>Answer: Data processing focuses on handling and converting raw data, while MIS uses processed data to generate informative reports that help in decision-making.</li>
-                    <li style="margin-bottom: 12px;"><strong>What are examples of MIS?</strong><br>Answer: Sales report system, Human Resource Information System (HRIS), Inventory control system.</li>
-                    <li style="margin-bottom: 12px;"><strong>What are the types of MIS?</strong><br>Answer: Transaction Processing Systems (TPS), Decision Support Systems (DSS), Executive Information Systems (EIS), Office Automation Systems (OAS).</li>
-                    <li style="margin-bottom: 12px;"><strong>Why is MIS important in business?</strong><br>Answer: MIS helps in strategic planning, improves efficiency, reduces costs, and supports data-driven decisions.</li>
-                    <li style="margin-bottom: 12px;"><strong>What are the stages of data processing?</strong><br>Answer: Data Collection, Data Preparation, Data Input, Processing, Output, Storage.</li>
-                    <li style="margin-bottom: 12px;"><strong>Who uses MIS and who uses data processing systems?</strong><br>Answer: MIS is used by managers and executives. Data processing systems are used by clerical and IT staff.</li>
-                    <li style="margin-bottom: 12px;"><strong>Can data processing exist without MIS?</strong><br>Answer: Yes. Data processing can exist as a standalone function (e.g., for payroll), but MIS depends on data processing for input.</li>
-                    <li style="margin-bottom: 12px;"><strong>What technologies are commonly used in MIS?</strong><br>Answer: Databases, spreadsheets, ERP systems, business intelligence tools, dashboards.</li>
-                </ol>
+                <p style="color: #cbd5e1; margin-top: 15px;">These goals are interconnected and designed to leave no one behind. They guide governments, businesses, and civil society in shaping policies and actions that promote a better future.</p>
             </div>
         </div>
     </section>
@@ -406,27 +1092,32 @@
     <script>
         function openUnits(subject) {
             document.getElementById("subject-selection").style.display = "none";
-            document.getElementById("unit-selection").style.display = "block";
-            document.getElementById("notes-content-unit2").style.display = "none";
+            document.querySelectorAll(".unit-container").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".notes-page").forEach(el => el.style.display = "none");
+            
+            let target = document.getElementById("unit-selection-" + subject);
+            if(target) target.style.display = "block";
         }
 
         function backToSubjects() {
             document.getElementById("subject-selection").style.display = "block";
-            document.getElementById("unit-selection").style.display = "none";
+            document.querySelectorAll(".unit-container").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".notes-page").forEach(el => el.style.display = "none");
         }
 
-        function openNotes(unit) {
-            if(unit === 'unit2') {
-                document.getElementById("unit-selection").style.display = "none";
-                document.getElementById("notes-content-unit2").style.display = "block";
-            } else {
-                alert("Please select Unit 2 to view these precise notes!");
-            }
+        function openNotes(subject, unit) {
+            let unitContainer = document.getElementById("unit-selection-" + subject);
+            if(unitContainer) unitContainer.style.display = "none";
+            
+            let notesPage = document.getElementById("notes-content-" + subject + "-" + unit);
+            if(notesPage) notesPage.style.display = "block";
         }
 
-        function backToUnits() {
-            document.getElementById("unit-selection").style.display = "block";
-            document.getElementById("notes-content-unit2").style.display = "none";
+        function backToUnits(subject) {
+            let unitContainer = document.getElementById("unit-selection-" + subject);
+            if(unitContainer) unitContainer.style.display = "block";
+            
+            document.querySelectorAll(".notes-page").forEach(el => el.style.display = "none");
         }
     </script>
 </body>
